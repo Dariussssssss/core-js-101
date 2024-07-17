@@ -48,31 +48,28 @@ it.optional('removeFirstOccurrences should remove all specified values from a st
   assert.equal(tasks.removeFirstOccurrences('ABABAB', 'BA'), 'ABAB');
 });
 
-// it.optional('unbracketTag should remove first and last angle brackets from tag string', () => {
-//   assert.equal(tasks.unbracketTag('<div>'), 'div');
-//   assert.equal(tasks.unbracketTag('<span>'), 'span');
-//   assert.equal(tasks.unbracketTag('<a>'), 'a');
-// });
-//
-// eslint-disable-next-line max-len
-// it.optional('convertToUpperCase should convert all chars from specified string into upper case', () => {
-//   assert.equal(tasks.convertToUpperCase('Thunderstruck'), 'THUNDERSTRUCK');
-// eslint-disable-next-line max-len
-//   assert.equal(tasks.convertToUpperCase('abcdefghijklmnopqrstuvwxyz'), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
-// });
-//
-// eslint-disable-next-line max-len
-// it.optional('extractEmails should extract emails from string list delimeted by semicolons', () => {
-//   assert.deepEqual(
-//     tasks.extractEmails('angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com'),
-//     ['angus.young@gmail.com', 'brian.johnson@hotmail.com', 'bon.scott@yahoo.com'],
-//   );
-//   assert.deepEqual(
-//     tasks.extractEmails('info@gmail.com'),
-//     ['info@gmail.com'],
-//   );
-// });
-//
+it.optional('unbracketTag should remove first and last angle brackets from tag string', () => {
+  assert.equal(tasks.unbracketTag('<div>'), 'div');
+  assert.equal(tasks.unbracketTag('<span>'), 'span');
+  assert.equal(tasks.unbracketTag('<a>'), 'a');
+});
+
+it.optional('convertToUpperCase should convert all chars from specified string into upper case', () => {
+  assert.equal(tasks.convertToUpperCase('Thunderstruck'), 'THUNDERSTRUCK');
+  assert.equal(tasks.convertToUpperCase('abcdefghijklmnopqrstuvwxyz'), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+});
+
+it.optional('extractEmails should extract emails from string list delimeted by semicolons', () => {
+  assert.deepEqual(
+    tasks.extractEmails('angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com'),
+    ['angus.young@gmail.com', 'brian.johnson@hotmail.com', 'bon.scott@yahoo.com'],
+  );
+  assert.deepEqual(
+    tasks.extractEmails('info@gmail.com'),
+    ['info@gmail.com'],
+  );
+});
+
 // eslint-disable-next-line max-len
 // it.optional('getRectangleString should return the string reprentation of rectangle with specified size', () => {
 //   assert.equal(
@@ -109,27 +106,27 @@ it.optional('removeFirstOccurrences should remove all specified values from a st
 //   );
 // });
 //
-// it.optional('isString should return true if argument is a string', () => {
-//   assert.equal(tasks.isString(), false, 'undefined');
-//   assert.equal(tasks.isString(null), false, 'null');
-//   assert.equal(tasks.isString([]), false, '[]');
-//   assert.equal(tasks.isString('test'), true, 'test');
-//   // eslint-disable-next-line no-new-wrappers
-//   assert.equal(tasks.isString(new String('test')), true, "new String('test')");
-// });
-//
-// it.optional('getCardId should return the index of card in the initial deck', () => {
-//   [
-//     'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
-//     'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
-//     'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
-//     'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠',
-//   ].forEach((val, index) => {
-//     assert.equal(
-//       tasks.getCardId(val),
-//       index,
-//       `Invalid id for card '${val}':`,
-//     );
-//  });
-// });
+it.optional('isString should return true if argument is a string', () => {
+  assert.equal(tasks.isString(), false, 'undefined');
+  assert.equal(tasks.isString(null), false, 'null');
+  assert.equal(tasks.isString([]), false, '[]');
+  assert.equal(tasks.isString('test'), true, 'test');
+  // eslint-disable-next-line no-new-wrappers
+  assert.equal(tasks.isString(new String('test')), true, "new String('test')");
+});
+
+it.optional('getCardId should return the index of card in the initial deck', () => {
+  [
+    'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
+    'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
+    'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
+    'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠',
+  ].forEach((val, index) => {
+    assert.equal(
+      tasks.getCardId(val),
+      index,
+      `Invalid id for card '${val}':`,
+    );
+  });
+});
 // });

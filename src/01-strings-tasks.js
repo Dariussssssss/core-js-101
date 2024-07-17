@@ -19,9 +19,9 @@
 //  *   '',  'bb'  => 'bb'
 //  */
 function concatenateStrings(value1, value2) {
-  // if (typeof value1 !== 'string' && typeof value2 !== 'string') {
-  //   throw new Error('Not implemented');
-  // }
+  if (typeof value1 !== 'string' && typeof value2 !== 'string') {
+    throw new Error('Not implemented');
+  }
   return value1 + value2;
 }
 
@@ -119,8 +119,6 @@ function removeLeadingAndTrailingWhitespaces(value) {
   return subStr.trim();
 }
 
-removeLeadingAndTrailingWhitespaces('\tHello, World! ');
-
 // /**
 //  * Returns a string that repeated the specified number of times.
 //  *
@@ -153,56 +151,59 @@ function removeFirstOccurrences(str, value) {
   // throw new Error('Not implemented');
   return str.replace(value, '');
 }
-//
-// /**
-//  * Remove the first and last angle brackets from tag string
-//  *
-//  * @param {string} str
-//  * @return {string}
-//  *
-//  * @example
-//  *   '<div>' => 'div'
-//  *   '<span>' => 'span'
-//  *   '<a>' => 'a'
-//  */
-// function unbracketTag(/* str */) {
-//   throw new Error('Not implemented');
-// }
-//
-//
-// /**
-//  * Converts all characters of the specified string into the upper case
-//  *
-//  * @param {string} str
-//  * @return {string}
-//  *
-//  * @example
-//  *   'Thunderstruck' => 'THUNDERSTRUCK'
-//  *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-//  */
-// function convertToUpperCase(/* str */) {
-//   throw new Error('Not implemented');
-// }
-//
-// /**
-//  * Extracts e-mails from single string with e-mails list delimeted by semicolons
-//  *
-//  * @param {string} str
-//  * @return {array}
-//  *
-//  * @example
-//  *   'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com'
-//  *   => [
-//  *      'angus.young@gmail.com',
-//  *      'brian.johnson@hotmail.com',
-//  *      'bon.scott@yahoo.com'
-//  *   ],
-//  *   'info@gmail.com' => ['info@gmail.com']
-//  */
-// function extractEmails(/* str */) {
-//   throw new Error('Not implemented');
-// }
-//
+
+/**
+ * Remove the first and last angle brackets from tag string
+ *
+ * @param {string} str
+ * @return {string}
+ *
+ * @example
+ *   '<div>' => 'div'
+ *   '<span>' => 'span'
+ *   '<a>' => 'a'
+ */
+function unbracketTag(str) {
+  // throw new Error('Not implemented');
+  return str.slice(1, -1);
+}
+
+
+/**
+ * Converts all characters of the specified string into the upper case
+ *
+ * @param {string} str
+ * @return {string}
+ *
+ * @example
+ *   'Thunderstruck' => 'THUNDERSTRUCK'
+ *  'abcdefghijklmnopqrstuvwxyz' => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+ */
+function convertToUpperCase(str) {
+  // throw new Error('Not implemented');
+  return str.toUpperCase();
+}
+
+/**
+ * Extracts e-mails from single string with e-mails list delimeted by semicolons
+ *
+ * @param {string} str
+ * @return {array}
+ *
+ * @example
+ *   'angus.young@gmail.com;brian.johnson@hotmail.com;bon.scott@yahoo.com'
+ *   => [
+ *      'angus.young@gmail.com',
+ *      'brian.johnson@hotmail.com',
+ *      'bon.scott@yahoo.com'
+ *   ],
+ *   'info@gmail.com' => ['info@gmail.com']
+ */
+function extractEmails(str) {
+  // throw new Error('Not implemented');
+  return str.split(';');
+}
+
 // /**
 //  * Returns the string representation of rectangle with specified width and height
 //  * using pseudograhic chars
@@ -251,24 +252,26 @@ function removeFirstOccurrences(str, value) {
 //   throw new Error('Not implemented');
 // }
 //
-// /**
-//  * Returns true if the value is string; otherwise false.
-//  * @param {string} value
-//  * @return {boolean}
-//  *
-//  * @example
-//  *   isString() => false
-//  *   isString(null) => false
-//  *   isString([]) => false
-//  *   isString({}) => false
-//  *   isString('test') => true
-//  *   isString(new String('test')) => true
-//  */
-// function isString(/* value */) {
-//   throw new Error('Not implemented');
-// }
-//
-//
+/**
+ * Returns true if the value is string; otherwise false.
+ * @param {string} value
+ * @return {boolean}
+ *
+ * @example
+ *   isString() => false
+ *   isString(null) => false
+ *   isString([]) => false
+ *   isString({}) => false
+ *   isString('test') => true
+ *   isString(new String('test')) => true
+ */
+function isString(value) {
+  // throw new Error('Not implemented');
+  return (typeof value === 'string' || value instanceof String);
+}
+
+isString(String('test'));
+
 // /**
 //  * Returns playid card id.
 //  *
@@ -293,10 +296,17 @@ function removeFirstOccurrences(str, value) {
 //  *   'Q♠' => 50
 //  *   'K♠' => 51
 //  */
-// function getCardId(/* value */) {
-//   throw new Error('Not implemented');
-// }
-
+function getCardId(value) {
+  // throw new Error('Not implemented');
+  const cardDesk = [
+    'A♣', '2♣', '3♣', '4♣', '5♣', '6♣', '7♣', '8♣', '9♣', '10♣', 'J♣', 'Q♣', 'K♣',
+    'A♦', '2♦', '3♦', '4♦', '5♦', '6♦', '7♦', '8♦', '9♦', '10♦', 'J♦', 'Q♦', 'K♦',
+    'A♥', '2♥', '3♥', '4♥', '5♥', '6♥', '7♥', '8♥', '9♥', '10♥', 'J♥', 'Q♥', 'K♥',
+    'A♠', '2♠', '3♠', '4♠', '5♠', '6♠', '7♠', '8♠', '9♠', '10♠', 'J♠', 'Q♠', 'K♠',
+  ];
+  const cardId = cardDesk.indexOf(value);
+  return cardId;
+}
 
 module.exports = {
   concatenateStrings,
@@ -307,11 +317,11 @@ module.exports = {
   removeLeadingAndTrailingWhitespaces,
   repeatString,
   removeFirstOccurrences,
-  // unbracketTag,
-  // convertToUpperCase,
-  // extractEmails,
+  unbracketTag,
+  convertToUpperCase,
+  extractEmails,
   // getRectangleString,
   // encodeToRot13,
-  // isString,
-  // getCardId,
+  isString,
+  getCardId,
 };
