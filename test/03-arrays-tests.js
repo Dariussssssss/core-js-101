@@ -1,56 +1,56 @@
-// const assert = require('assert');
-// const tasks = require('../src/03-arrays-tasks');
-// it.optional = require('../extensions/it-optional');
-//
-// describe('03-arrays-tasks', () => {
-//   it.optional('findElement should return the index of specified value if exists', () => {
-//     [
-//       {
-//         arr: ['Ace', 10, true],
-//         value: 10,
-//         expected: 1,
-//       }, {
-//         arr: ['Array', 'Number', 'string'],
-//         value: 'Date',
-//         expected: -1,
-//       }, {
-//         arr: [0, 1, 2, 3, 4, 5],
-//         value: 5,
-//         expected: 5,
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.findElement(data.arr, data.value);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `Index of '${data.value}' inside of [${data.arr}] = ${data.expected}, but actually ${actual}`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('generateOdds should return the array of odd numbers of specified size', () => {
-//     [
-//       {
-//         len: 1,
-//         expected: [1],
-//       }, {
-//         len: 2,
-//         expected: [1, 3],
-//       }, {
-//         len: 5,
-//         expected: [1, 3, 5, 7, 9],
-//       }, {
-//         len: 16,
-//         expected: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31],
-//       },
-//     ].forEach((data) => {
-//       assert.deepEqual(
-//         tasks.generateOdds(data.len),
-//         data.expected,
-//       );
-//     });
-//   });
+const assert = require('assert');
+const tasks = require('../src/03-arrays-tasks');
+it.optional = require('../extensions/it-optional');
+
+describe('03-arrays-tasks', () => {
+  it.optional('findElement should return the index of specified value if exists', () => {
+    [
+      {
+        arr: ['Ace', 10, true],
+        value: 10,
+        expected: 1,
+      }, {
+        arr: ['Array', 'Number', 'string'],
+        value: 'Date',
+        expected: -1,
+      }, {
+        arr: [0, 1, 2, 3, 4, 5],
+        value: 5,
+        expected: 5,
+      },
+    ].forEach((data) => {
+      const actual = tasks.findElement(data.arr, data.value);
+      assert.equal(
+        actual,
+        data.expected,
+        `Index of '${data.value}' inside of [${data.arr}] = ${data.expected}, but actually ${actual}`,
+      );
+    });
+  });
+
+
+  it.optional('generateOdds should return the array of odd numbers of specified size', () => {
+    [
+      {
+        len: 1,
+        expected: [1],
+      }, {
+        len: 2,
+        expected: [1, 3],
+      }, {
+        len: 5,
+        expected: [1, 3, 5, 7, 9],
+      }, {
+        len: 16,
+        expected: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31],
+      },
+    ].forEach((data) => {
+      assert.deepEqual(
+        tasks.generateOdds(data.len),
+        data.expected,
+      );
+    });
+  });
 //
 //
 //   it.optional('doubleArray should return the specified array twice', () => {
@@ -861,4 +861,4 @@
 //         );
 //       });
 //   });
-// });
+});

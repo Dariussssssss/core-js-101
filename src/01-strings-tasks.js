@@ -248,10 +248,14 @@ function extractEmails(str) {
 //  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
 //  *
 //  */
-// function encodeToRot13(/* str */) {
-//   throw new Error('Not implemented');
+// function encodeToRot13(str) {
+//   // throw new Error('Not implemented');
+//   const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+//   const rot13 = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+//   let res;
+//   return res;
 // }
-//
+
 /**
  * Returns true if the value is string; otherwise false.
  * @param {string} value

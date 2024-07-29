@@ -19,10 +19,11 @@
 //  *   5, 10 => 50
 //  *   5, 5  => 25
 //  */
-// function getRectangleArea(/* width, height */) {
-//   throw new Error('Not implemented');
-// }
-//
+function getRectangleArea(width, height) {
+  // throw new Error('Not implemented');
+  return width * height;
+}
+
 //
 // /**
 //  * Returns a circumference of circle given by radius.
@@ -35,9 +36,11 @@
 //  *   3.14 => 19.729201864543903
 //  *   0    => 0
 //  */
-// function getCircleCircumference(/* radius */) {
-//   throw new Error('Not implemented');
-// }
+function getCircleCircumference(radius) {
+  // throw new Error('Not implemented');
+  return (2 * Math.PI * radius);
+}
+
 //
 // /**
 //  * Returns an average of two given numbers.
@@ -51,10 +54,14 @@
 //  *  10, 0  => 5
 //  *  -3, 3  => 0
 //  */
-// function getAverage(/* value1, value2 */) {
-//   throw new Error('Not implemented');
+// function getAverage(value1, value2) {
+//   // throw new Error('Not implemented');
+//   const sum = value1 + value2;
+//   if (sum < 0) {
+//     return 0;
+//   } return (value1 + value2) / 2;
 // }
-//
+
 // /**
 //  * Returns a distance between two points by cartesian coordinates.
 //  *
@@ -224,17 +231,17 @@
 //   throw new Error('Not implemented');
 // }
 //
-// module.exports = {
-//   getRectangleArea,
-//   getCircleCircumference,
-//   getAverage,
-//   getDistanceBetweenPoints,
-//   getLinearEquationRoot,
-//   getAngleBetweenVectors,
-//   getLastDigit,
-//   parseNumberFromString,
-//   getParallelepipedDiagonal,
-//   roundToPowerOfTen,
-//   isPrime,
-//   toNumber,
-// };
+module.exports = {
+  getRectangleArea,
+  getCircleCircumference,
+  // getAverage,
+  // getDistanceBetweenPoints,
+  // getLinearEquationRoot,
+  // getAngleBetweenVectors,
+  // getLastDigit,
+  // parseNumberFromString,
+  // getParallelepipedDiagonal,
+  // roundToPowerOfTen,
+  // isPrime,
+  // toNumber,
+};
