@@ -1,114 +1,114 @@
-// const assert = require('assert');
-// const tasks = require('../src/04-conditions-n-loops-tasks');
-// it.optional = require('../extensions/it-optional');
-//
-// describe('04-conditions-n-loops-tasks', () => {
-//   it.optional('getFizzBuzz should return the output value according specification', () => {
-//     [
-//       1, 2, 4, 7, 8, 11, 13, 14, 16, 17, 19, 22, 23, 26, 28, 29, 31, 32, 34,
-//       37, 38, 41, 43, 44, 47, 49, 52, 53, 56, 58, 59, 61, 62, 64, 67, 68, 71,
-//       73, 74, 76, 77, 79, 82, 83, 86, 88, 89, 91, 92, 94, 97, 98,
-//     ].forEach((num) => {
-//       const actual = tasks.getFizzBuzz(num);
-//       assert.equal(
-//         actual,
-//         num,
-//         `getFizzBuzz shoud return ${num} for ${num}, but actually ${actual}`,
-//       );
-//     });
-//
-//     [
-//       3, 6, 9, 12, 18, 21, 24, 27,
-//       33, 36, 39, 42, 48, 51, 54, 57,
-//       63, 66, 69, 72, 78, 81, 84, 87,
-//       93, 96, 99,
-//     ].forEach((num) => {
-//       const actual = tasks.getFizzBuzz(num);
-//       assert.equal(
-//         actual,
-//         'Fizz',
-//         `getFizzBuzz shoud return 'Fizz' for ${num}, but actually ${actual}`,
-//       );
-//     });
-//
-//     [
-//       5, 10, 20, 25, 35, 40, 50, 55, 65, 70, 80, 85, 95, 100,
-//     ].forEach((num) => {
-//       const actual = tasks.getFizzBuzz(num);
-//       assert.equal(
-//         actual,
-//         'Buzz',
-//         `getFizzBuzz shoud return 'Buzz' for ${num}, but actually ${actual}`,
-//       );
-//     });
-//
-//     [
-//       15, 30, 45, 60, 75, 90,
-//     ].forEach((num) => {
-//       const actual = tasks.getFizzBuzz(num);
-//       assert.equal(
-//         actual,
-//         'FizzBuzz',
-//         `getFizzBuzz shoud return 'FizzBuzz' for ${num}, but actually ${actual}`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getFactorial should return the functorial of given number', () => {
-//     [
-//       { n: 1, expected: 1 },
-//       { n: 5, expected: 120 },
-//       { n: 10, expected: 3628800 },
-//     ].forEach((data) => {
-//       const actual = tasks.getFactorial(data.n);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `${data.n}! = ${data.expected}, but actual ${actual}`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getSumBetweenNumbers should return the sum inside the specified interval', () => {
-//     [
-//       { n1: 1, n2: 2, expected: 3 },
-//       { n1: 5, n2: 10, expected: 45 },
-//       { n1: -1, n2: 1, expected: 0 },
-//     ].forEach((data) => {
-//       const actual = tasks.getSumBetweenNumbers(data.n1, data.n2);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `Sum of [${data.n1},${data.n2}] = ${data.expected}, but actual ${actual}`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('isTriangle should check if triangle can be built', () => {
-//     [
-//       { sides: [1, 2, 3], expected: false },
-//       { sides: [3, 4, 5], expected: true },
-//       { sides: [10, 1, 1], expected: false },
-//       { sides: [10, 10, 10], expected: true },
-//     ].forEach((data) => {
-//       [[0, 1, 2], [0, 2, 1], [1, 2, 0], [1, 0, 2], [2, 0, 1], [2, 1, 0]].forEach((idx) => {
-//         const actual = tasks.isTriangle(
-//           data.sides[idx[0]],
-//           data.sides[idx[1]],
-//           data.sides[idx[2]],
-//         );
-//         assert.equal(
-//           actual,
-//           data.expected,
-//           `Triangle from [${data.sides.toString()}]: expected ${data.expected} but actual ${actual}`,
-//         );
-//       });
-//     });
-//   });
-//
+const assert = require('assert');
+const tasks = require('../src/04-conditions-n-loops-tasks');
+it.optional = require('../extensions/it-optional');
+
+describe('04-conditions-n-loops-tasks', () => {
+  it.optional('getFizzBuzz should return the output value according specification', () => {
+    [
+      1, 2, 4, 7, 8, 11, 13, 14, 16, 17, 19, 22, 23, 26, 28, 29, 31, 32, 34,
+      37, 38, 41, 43, 44, 47, 49, 52, 53, 56, 58, 59, 61, 62, 64, 67, 68, 71,
+      73, 74, 76, 77, 79, 82, 83, 86, 88, 89, 91, 92, 94, 97, 98,
+    ].forEach((num) => {
+      const actual = tasks.getFizzBuzz(num);
+      assert.equal(
+        actual,
+        num,
+        `getFizzBuzz shoud return ${num} for ${num}, but actually ${actual}`,
+      );
+    });
+
+    [
+      3, 6, 9, 12, 18, 21, 24, 27,
+      33, 36, 39, 42, 48, 51, 54, 57,
+      63, 66, 69, 72, 78, 81, 84, 87,
+      93, 96, 99,
+    ].forEach((num) => {
+      const actual = tasks.getFizzBuzz(num);
+      assert.equal(
+        actual,
+        'Fizz',
+        `getFizzBuzz shoud return 'Fizz' for ${num}, but actually ${actual}`,
+      );
+    });
+
+    [
+      5, 10, 20, 25, 35, 40, 50, 55, 65, 70, 80, 85, 95, 100,
+    ].forEach((num) => {
+      const actual = tasks.getFizzBuzz(num);
+      assert.equal(
+        actual,
+        'Buzz',
+        `getFizzBuzz shoud return 'Buzz' for ${num}, but actually ${actual}`,
+      );
+    });
+
+    [
+      15, 30, 45, 60, 75, 90,
+    ].forEach((num) => {
+      const actual = tasks.getFizzBuzz(num);
+      assert.equal(
+        actual,
+        'FizzBuzz',
+        `getFizzBuzz shoud return 'FizzBuzz' for ${num}, but actually ${actual}`,
+      );
+    });
+  });
+
+
+  it.optional('getFactorial should return the functorial of given number', () => {
+    [
+      { n: 1, expected: 1 },
+      { n: 5, expected: 120 },
+      { n: 10, expected: 3628800 },
+    ].forEach((data) => {
+      const actual = tasks.getFactorial(data.n);
+      assert.equal(
+        actual,
+        data.expected,
+        `${data.n}! = ${data.expected}, but actual ${actual}`,
+      );
+    });
+  });
+
+
+  it.optional('getSumBetweenNumbers should return the sum inside the specified interval', () => {
+    [
+      { n1: 1, n2: 2, expected: 3 },
+      { n1: 5, n2: 10, expected: 45 },
+      { n1: -1, n2: 1, expected: 0 },
+    ].forEach((data) => {
+      const actual = tasks.getSumBetweenNumbers(data.n1, data.n2);
+      assert.equal(
+        actual,
+        data.expected,
+        `Sum of [${data.n1},${data.n2}] = ${data.expected}, but actual ${actual}`,
+      );
+    });
+  });
+
+
+  it.optional('isTriangle should check if triangle can be built', () => {
+    [
+      { sides: [1, 2, 3], expected: false },
+      { sides: [3, 4, 5], expected: true },
+      { sides: [10, 1, 1], expected: false },
+      { sides: [10, 10, 10], expected: true },
+    ].forEach((data) => {
+      [[0, 1, 2], [0, 2, 1], [1, 2, 0], [1, 0, 2], [2, 0, 1], [2, 1, 0]].forEach((idx) => {
+        const actual = tasks.isTriangle(
+          data.sides[idx[0]],
+          data.sides[idx[1]],
+          data.sides[idx[2]],
+        );
+        assert.equal(
+          actual,
+          data.expected,
+          `Triangle from [${data.sides.toString()}]: expected ${data.expected} but actual ${actual}`,
+        );
+      });
+    });
+  });
+
 //
 //   it.optional('doRectanglesOverlap should return true if rectangles overlap', () => {
 //     [
@@ -622,4 +622,4 @@
 //       );
 //     });
 //   });
-// });
+});

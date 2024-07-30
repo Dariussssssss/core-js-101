@@ -32,9 +32,21 @@
 //  *  21 => 'Fizz'
 //  *
 //  */
-// function getFizzBuzz(/* num */) {
-//   throw new Error('Not implemented');
-// }
+function getFizzBuzz(num) {
+  let result;
+  if (num % 3 === 0 && num % 5 === 0) {
+    result = 'FizzBuzz';
+  } else if (num % 5 === 0) {
+    result = 'Buzz';
+  } else if (num % 3 === 0) {
+    result = 'Fizz';
+  } else {
+    result = num;
+  }
+
+  return result;
+}
+
 //
 //
 // /**
@@ -48,9 +60,15 @@
 //  *   5  => 120
 //  *   10 => 3628800
 //  */
-// function getFactorial(/* n */) {
-//   throw new Error('Not implemented');
-// }
+function getFactorial(n) {
+  let res = 1;
+  // eslint-disable-next-line no-plusplus
+  for (let i = 1; i <= n; i++) {
+    res *= i;
+  }
+  return res;
+}
+
 //
 //
 // /**
@@ -65,9 +83,15 @@
 //  *   5,10  =>  45 ( = 5+6+7+8+9+10 )
 //  *   -1,1  =>  0  ( = -1 + 0 + 1 )
 //  */
-// function getSumBetweenNumbers(/* n1, n2 */) {
-//   throw new Error('Not implemented');
-// }
+function getSumBetweenNumbers(n1, n2) {
+  let result = 0;
+  // eslint-disable-next-line no-plusplus
+  for (let i = n1; i <= n2; i++) {
+    result += i;
+  }
+  return result;
+}
+
 //
 //
 // /**
@@ -85,10 +109,10 @@
 //  *   10,1,1   =>  false
 //  *   10,10,10 =>  true
 //  */
-// function isTriangle(/* a, b, c */) {
-//   throw new Error('Not implemented');
-// }
-//
+function isTriangle(a, b, c) {
+  return a + b > c && a + c > b && b + c > a;
+}
+
 //
 // /**
 //  * Returns true, if two specified axis-aligned rectangles overlap, otherwise false.
@@ -404,11 +428,11 @@
 // }
 //
 //
-// module.exports = {
-//   getFizzBuzz,
-//   getFactorial,
-//   getSumBetweenNumbers,
-//   isTriangle,
+module.exports = {
+  getFizzBuzz,
+  getFactorial,
+  getSumBetweenNumbers,
+  isTriangle,
 //   doRectanglesOverlap,
 //   isInsideCircle,
 //   findFirstSingleChar,
@@ -422,4 +446,4 @@
 //   getCommonDirectoryPath,
 //   getMatrixProduct,
 //   evaluateTicTacToePosition,
-// };
+};

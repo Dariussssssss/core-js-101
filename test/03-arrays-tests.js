@@ -51,75 +51,75 @@ describe('03-arrays-tasks', () => {
       );
     });
   });
-//
-//
-//   it.optional('doubleArray should return the specified array twice', () => {
-//     [
-//       {
-//         arr: ['Ace', 10, true],
-//         expected: ['Ace', 10, true, 'Ace', 10, true],
-//       }, {
-//         arr: [0, 1, 2, 3, 4, 5],
-//         expected: [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5],
-//       }, {
-//         arr: [],
-//         expected: [],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.doubleArray(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//         `The result of doubling [${data.arr}] is not correct`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getArrayOfPositives should return the array of positive values from specified array', () => {
-//     [
-//       {
-//         arr: [0, 1, 2, 3, 4, 5],
-//         expected: [1, 2, 3, 4, 5],
-//       }, {
-//         arr: [-1, 2, -5, -4, 0],
-//         expected: [2],
-//       }, {
-//         arr: [],
-//         expected: [],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getArrayOfPositives(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getArrayOfStrings should return the array of string values from specified array', () => {
-//     [
-//       {
-//         arr: [0, 1, 'cat', 3, true, 'dog'],
-//         expected: ['cat', 'dog'],
-//       }, {
-//         arr: [1, 2, 3, 4, 5],
-//         expected: [],
-//       }, {
-//         arr: ['cat', 'dog', 'raccoon'],
-//         expected: ['cat', 'dog', 'raccoon'],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getArrayOfStrings(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
+
+
+  it.optional('doubleArray should return the specified array twice', () => {
+    [
+      {
+        arr: ['Ace', 10, true],
+        expected: ['Ace', 10, true, 'Ace', 10, true],
+      }, {
+        arr: [0, 1, 2, 3, 4, 5],
+        expected: [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5],
+      }, {
+        arr: [],
+        expected: [],
+      },
+    ].forEach((data) => {
+      const actual = tasks.doubleArray(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+        `The result of doubling [${data.arr}] is not correct`,
+      );
+    });
+  });
+
+
+  it.optional('getArrayOfPositives should return the array of positive values from specified array', () => {
+    [
+      {
+        arr: [0, 1, 2, 3, 4, 5],
+        expected: [1, 2, 3, 4, 5],
+      }, {
+        arr: [-1, 2, -5, -4, 0],
+        expected: [2],
+      }, {
+        arr: [],
+        expected: [],
+      },
+    ].forEach((data) => {
+      const actual = tasks.getArrayOfPositives(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+
+  it.optional('getArrayOfStrings should return the array of string values from specified array', () => {
+    [
+      {
+        arr: [0, 1, 'cat', 3, true, 'dog'],
+        expected: ['cat', 'dog'],
+      }, {
+        arr: [1, 2, 3, 4, 5],
+        expected: [],
+      }, {
+        arr: ['cat', 'dog', 'raccoon'],
+        expected: ['cat', 'dog', 'raccoon'],
+      },
+    ].forEach((data) => {
+      const actual = tasks.getArrayOfStrings(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+
 //   it.optional('removeFalsyValues should return the specified array without falsy values', () => {
 //     [
 //       {

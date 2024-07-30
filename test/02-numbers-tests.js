@@ -72,30 +72,30 @@ describe('02-numbers-tasks', () => {
 //     assert.equal(tasks.roundToPowerOfTen(9678, 3), 10000);
 //   });
 //
-//   it.optional('isPrime should return true if specified number is prime', () => {
-//     assert.equal(tasks.isPrime(2), true, '2');
-//     assert.equal(tasks.isPrime(3), true, '3');
-//     assert.equal(tasks.isPrime(4), false, '4');
-//     assert.equal(tasks.isPrime(5), true, '5');
-//     assert.equal(tasks.isPrime(6), false, '6');
-//     assert.equal(tasks.isPrime(7), true, '7');
-//     assert.equal(tasks.isPrime(8), false, '8');
-//     assert.equal(tasks.isPrime(9), false, '9');
-//     assert.equal(tasks.isPrime(10), false, '10');
-//     assert.equal(tasks.isPrime(11), true, '11');
-//     assert.equal(tasks.isPrime(12), false, '12');
-//     assert.equal(tasks.isPrime(13), true, '13');
-//     assert.equal(tasks.isPrime(113), true, '113');
-//     assert.equal(tasks.isPrime(119), false, '119');
-//   });
-//
-//   it.optional('toNumber should convert any value to number or return the default', () => {
-//     assert.equal(tasks.toNumber(null, 0), 0);
-//     assert.equal(tasks.toNumber('test', 0), 0);
-//     assert.equal(tasks.toNumber('1', 0), 1);
-//     assert.equal(tasks.toNumber(42, 0), 42);
-//     // eslint-disable-next-line no-new-wrappers
-//     assert.equal(tasks.toNumber(new Number(42), 0), 42);
-//     assert.equal(tasks.toNumber(undefined, -1), -1);
-//   });
+  it.optional('isPrime should return true if specified number is prime', () => {
+    assert.equal(tasks.isPrime(2), true, '2');
+    assert.equal(tasks.isPrime(3), true, '3');
+    assert.equal(tasks.isPrime(4), false, '4');
+    assert.equal(tasks.isPrime(5), true, '5');
+    assert.equal(tasks.isPrime(6), false, '6');
+    assert.equal(tasks.isPrime(7), true, '7');
+    assert.equal(tasks.isPrime(8), false, '8');
+    assert.equal(tasks.isPrime(9), false, '9');
+    assert.equal(tasks.isPrime(10), false, '10');
+    assert.equal(tasks.isPrime(11), true, '11');
+    assert.equal(tasks.isPrime(12), false, '12');
+    assert.equal(tasks.isPrime(13), true, '13');
+    assert.equal(tasks.isPrime(113), true, '113');
+    assert.equal(tasks.isPrime(119), false, '119');
+  });
+
+  it.optional('toNumber should convert any value to number or return the default', () => {
+    assert.equal(tasks.toNumber(null, 0), 0);
+    assert.equal(tasks.toNumber('test', 0), 0);
+    assert.equal(tasks.toNumber('1', 0), 1);
+    assert.equal(tasks.toNumber(42, 0), 42);
+    // eslint-disable-next-line no-new-wrappers
+    assert.equal(tasks.toNumber(new Number(42), 0), 42);
+    assert.equal(tasks.toNumber(undefined, -1), -1);
+  });
 });

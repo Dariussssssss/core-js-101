@@ -60,26 +60,26 @@ function generateOdds(len) {
 //  *    [0, 1, 2, 3, 4, 5] => [0, 1, 2, 3, 4, 5,   0, 1, 2, 3, 4, 5]
 //  *    [] => []
 //  */
-// function doubleArray(/* arr */) {
-//   throw new Error('Not implemented');
-// }
-//
-//
-// /**
-//  * Returns an array of positive numbers from the specified array in original order
-//  *
-//  * @param {array} arr
-//  * @return {array}
-//  *
-//  * @example
-//  *    [ 0, 1, 2, 3, 4, 5 ] => [ 1, 2, 3, 4, 5 ]
-//  *    [-1, 2, -5, -4, 0] => [ 2 ]
-//  *    [] => []
-//  */
-// function getArrayOfPositives(/* arr */) {
-//   throw new Error('Not implemented');
-// }
-//
+function doubleArray(arr) {
+  return arr.concat(arr);
+}
+
+
+/**
+ * Returns an array of positive numbers from the specified array in original order
+ *
+ * @param {array} arr
+ * @return {array}
+ *
+ * @example
+ *    [ 0, 1, 2, 3, 4, 5 ] => [ 1, 2, 3, 4, 5 ]
+ *    [-1, 2, -5, -4, 0] => [ 2 ]
+ *    [] => []
+ */
+function getArrayOfPositives(arr) {
+  return arr.filter((el) => (el > 0));
+}
+
 // /**
 //  * Returns the array with strings only in the specified array (in original order)
 //  *
@@ -91,9 +91,10 @@ function generateOdds(len) {
 //  *    [ 1, 2, 3, 4, 5 ] => []
 //  *    [ 'cat, 'dog', 'raccoon' ] => [ 'cat', 'dog', 'raccoon' ]
 //  */
-// function getArrayOfStrings(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function getArrayOfStrings(arr) {
+  return arr.filter((el) => (typeof el === 'string'));
+}
+
 //
 // /**
 //  * Removes falsy values from the specified array
@@ -579,9 +580,9 @@ function generateOdds(len) {
 module.exports = {
   findElement,
   generateOdds,
-//   doubleArray,
-//   getArrayOfPositives,
-//   getArrayOfStrings,
+  doubleArray,
+  getArrayOfPositives,
+  getArrayOfStrings,
 //   removeFalsyValues,
 //   getUpperCaseStrings,
 //   getStringsLength,

@@ -95,17 +95,16 @@ it.optional('extractEmails should extract emails from string list delimeted by s
 //   );
 // });
 //
-// it.optional('encodeToRot13 should encode-decode string using ROT13 algorithm', () => {
-//   assert.equal(tasks.encodeToRot13('hello'), 'uryyb');
-// eslint-disable-next-line max-len
-//   assert.equal(tasks.encodeToRot13('Why did the chicken cross the road?'), 'Jul qvq gur puvpxra pebff gur ebnq?');
-//   assert.equal(tasks.encodeToRot13('Gb trg gb gur bgure fvqr!'), 'To get to the other side!');
-//   assert.equal(
-//     tasks.encodeToRot13('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'),
-//     'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm',
-//   );
-// });
-//
+it.optional('encodeToRot13 should encode-decode string using ROT13 algorithm', () => {
+  assert.equal(tasks.encodeToRot13('hello'), 'uryyb');
+  assert.equal(tasks.encodeToRot13('Why did the chicken cross the road?'), 'Jul qvq gur puvpxra pebff gur ebnq?');
+  assert.equal(tasks.encodeToRot13('Gb trg gb gur bgure fvqr!'), 'To get to the other side!');
+  assert.equal(
+    tasks.encodeToRot13('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'),
+    'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm',
+  );
+});
+
 it.optional('isString should return true if argument is a string', () => {
   assert.equal(tasks.isString(), false, 'undefined');
   assert.equal(tasks.isString(null), false, 'null');

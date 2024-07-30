@@ -227,9 +227,20 @@ function extractEmails(str) {
 //  *             '└──────────┘\n'
 //  *
 //  */
-// function getRectangleString(/* width, height */) {
-//   throw new Error('Not implemented');
+// function getRectangleString(width, height) {
+//   const a = '┌';
+//   const b = '┐\n';
+//   const c = '└';
+//   const d = '┘\n';
+//   const w = '─';
+//   let h = '│';
+//   let res = a + b + c + d;
+//   if (width > 1 && height > 1) {
+//     res = a + w.repeat(width) + b + c + w.repeat(width) + d;
+//   }
+//   return res;
 // }
+
 //
 //
 // /**
@@ -248,13 +259,24 @@ function extractEmails(str) {
 //  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
 //  *
 //  */
-// function encodeToRot13(str) {
-//   // throw new Error('Not implemented');
-//   const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-//   const rot13 = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
-//   let res;
-//   return res;
-// }
+function encodeToRot13(str) {
+  // throw new Error('Not implemented');
+  const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const rot13 = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  let res;
+  let string = '';
+
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < str.length; i++) {
+    res = latin.indexOf(str[i]);
+    if (res >= 0) {
+      string += rot13[res];
+    } else {
+      string += str[i];
+    }
+  }
+  return string;
+}
 
 /**
  * Returns true if the value is string; otherwise false.
@@ -325,7 +347,7 @@ module.exports = {
   convertToUpperCase,
   extractEmails,
   // getRectangleString,
-  // encodeToRot13,
+  encodeToRot13,
   isString,
   getCardId,
 };

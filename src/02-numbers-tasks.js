@@ -208,10 +208,17 @@ function getCircleCircumference(radius) {
 //  *   16 => false
 //  *   17 => true
 //  */
-// function isPrime(/* n */) {
-//   throw new Error('Not implemented');
-// }
-//
+function isPrime(n) {
+  const sqrt = Math.trunc(Math.sqrt(n));
+  // eslint-disable-next-line no-plusplus
+  for (let i = 2; i <= sqrt; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
 // /**
 //  * Tries to convert value to number and returns it if conversion was successful;
 //  * otherwise returns default value passed as a second argument.
@@ -227,10 +234,12 @@ function getCircleCircumference(radius) {
 //  *   toNumber(42, 0) => 42
 //  *   toNumber(new Number(42), 0) => 42
 //  */
-// function toNumber(/* value, def */) {
-//   throw new Error('Not implemented');
-// }
-//
+function toNumber(value, def) {
+  const res = Number(value);
+  return Number.isNaN(res) ? def : res;
+}
+
+
 module.exports = {
   getRectangleArea,
   getCircleCircumference,
@@ -242,6 +251,6 @@ module.exports = {
   // parseNumberFromString,
   // getParallelepipedDiagonal,
   // roundToPowerOfTen,
-  // isPrime,
-  // toNumber,
+  isPrime,
+  toNumber,
 };
