@@ -22,12 +22,12 @@ describe('02-numbers-tasks', () => {
   //   assert.equal(tasks.getAverage(Number.MAX_VALUE, -Number.MAX_VALUE / 2), Number.MAX_VALUE / 4);
   // });
   //
-  //   it.optional('getDistanceBetweenPoints should return a distance between points', () => {
-  //     assert.equal(tasks.getDistanceBetweenPoints(0, 0, 0, 1), 1);
-  //     assert.equal(tasks.getDistanceBetweenPoints(0, 0, 1, 0), 1);
-  //     assert.equal(tasks.getDistanceBetweenPoints(-5, 0, 10, -10), 18.027756377319946);
-  //   });
-  //
+  it.optional('getDistanceBetweenPoints should return a distance between points', () => {
+    assert.equal(tasks.getDistanceBetweenPoints(0, 0, 0, 1), 1);
+    assert.equal(tasks.getDistanceBetweenPoints(0, 0, 1, 0), 1);
+    assert.equal(tasks.getDistanceBetweenPoints(-5, 0, 10, -10), 18.027756377319946);
+  });
+
   it.optional('getLinearEquationRoot should return a root of linear equation', () => {
     assert.equal(tasks.getLinearEquationRoot(5, -10), 2);
     assert.equal(tasks.getLinearEquationRoot(1, 8), -8);
