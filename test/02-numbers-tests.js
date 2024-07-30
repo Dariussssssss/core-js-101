@@ -28,12 +28,12 @@ describe('02-numbers-tasks', () => {
   //     assert.equal(tasks.getDistanceBetweenPoints(-5, 0, 10, -10), 18.027756377319946);
   //   });
   //
-  //   it.optional('getLinearEquationRoot should return a root of linear equation', () => {
-  //     assert.equal(tasks.getLinearEquationRoot(5, -10), 2);
-  //     assert.equal(tasks.getLinearEquationRoot(1, 8), -8);
-  //     assert.equal(tasks.getLinearEquationRoot(5, 0), 0);
-  //   });
-  //
+  it.optional('getLinearEquationRoot should return a root of linear equation', () => {
+    assert.equal(tasks.getLinearEquationRoot(5, -10), 2);
+    assert.equal(tasks.getLinearEquationRoot(1, 8), -8);
+    assert.equal(tasks.getLinearEquationRoot(5, 0), 0);
+  });
+
   //   it.optional('getAngleBetweenVectors should return a angle (in radians) between two linear vectors', () => {
   //     assert.equal(tasks.getAngleBetweenVectors(1, 0, 0, 1), Math.PI / 2);
   //     assert.equal(tasks.getAngleBetweenVectors(0, 1, 0, -1), Math.PI);
