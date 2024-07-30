@@ -187,9 +187,11 @@ function getCircleCircumference(radius) {
 //  *   1678, 2  => 1700
 //  *   1678, 3  => 2000
 //  */
-// function roundToPowerOfTen(/* num, pow */) {
-//   throw new Error('Not implemented');
-// }
+function roundToPowerOfTen(num, pow) {
+  // eslint-disable-next-line no-restricted-properties
+  return Math.round(num / Math.pow(10, pow)) * Math.pow(10, pow);
+}
+
 //
 // /**
 //  * Returns true is the number is prime; otherwise false.
@@ -250,7 +252,7 @@ module.exports = {
   // getLastDigit,
   // parseNumberFromString,
   // getParallelepipedDiagonal,
-  // roundToPowerOfTen,
+  roundToPowerOfTen,
   isPrime,
   toNumber,
 };
