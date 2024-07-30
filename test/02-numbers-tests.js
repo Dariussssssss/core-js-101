@@ -47,12 +47,12 @@ describe('02-numbers-tasks', () => {
   //     assert.equal(tasks.getLastDigit(5), 5);
   //     assert.equal(tasks.getLastDigit(0), 0);
   //   });
-  //
-  //   it.optional('parseNumberFromString should return a number from the given string representation', () => {
-  //     assert.equal(tasks.parseNumberFromString('100'), 100);
-  //     assert.equal(tasks.parseNumberFromString('37'), 37);
-  //     assert.equal(tasks.parseNumberFromString('-525.5'), -525.5);
-  //   });
+
+  it.optional('parseNumberFromString should return a number from the given string representation', () => {
+    assert.equal(tasks.parseNumberFromString('100'), 100);
+    assert.equal(tasks.parseNumberFromString('37'), 37);
+    assert.equal(tasks.parseNumberFromString('-525.5'), -525.5);
+  });
 
   it.optional('getParallelepipedDiagonal should return a diagonal length of the rectangular parallepiped', () => {
     assert.equal(tasks.getParallelepipedDiagonal(1, 1, 1), Math.sqrt(3));
