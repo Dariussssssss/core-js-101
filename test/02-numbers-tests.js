@@ -40,13 +40,13 @@ describe('02-numbers-tasks', () => {
   //     assert.equal(tasks.getAngleBetweenVectors(0, -1, 1, 0), Math.PI / 2);
   //     assert.equal(tasks.getAngleBetweenVectors(0, 1, 0, 1), 0);
   //   });
-  //
-  //   it.optional('getLastDigit should return a last digit of the number', () => {
-  //     assert.equal(tasks.getLastDigit(100), 0);
-  //     assert.equal(tasks.getLastDigit(37), 7);
-  //     assert.equal(tasks.getLastDigit(5), 5);
-  //     assert.equal(tasks.getLastDigit(0), 0);
-  //   });
+
+  it.optional('getLastDigit should return a last digit of the number', () => {
+    assert.equal(tasks.getLastDigit(100), 0);
+    assert.equal(tasks.getLastDigit(37), 7);
+    assert.equal(tasks.getLastDigit(5), 5);
+    assert.equal(tasks.getLastDigit(0), 0);
+  });
 
   it.optional('parseNumberFromString should return a number from the given string representation', () => {
     assert.equal(tasks.parseNumberFromString('100'), 100);

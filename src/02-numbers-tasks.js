@@ -132,10 +132,10 @@ function getCircleCircumference(radius) {
 //  *     5     => 5
 //  *     0     => 0
 //  */
-// function getLastDigit(/* value */) {
-//   throw new Error('Not implemented');
-// }
-//
+function getLastDigit(value) {
+  return value % 10;
+}
+
 //
 /**
  * Returns a number by given string representation.
@@ -250,7 +250,7 @@ module.exports = {
   // getDistanceBetweenPoints,
   // getLinearEquationRoot,
   // getAngleBetweenVectors,
-  // getLastDigit,
+  getLastDigit,
   parseNumberFromString,
   getParallelepipedDiagonal,
   roundToPowerOfTen,
