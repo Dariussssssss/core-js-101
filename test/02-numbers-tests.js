@@ -53,12 +53,12 @@ describe('02-numbers-tasks', () => {
   //     assert.equal(tasks.parseNumberFromString('37'), 37);
   //     assert.equal(tasks.parseNumberFromString('-525.5'), -525.5);
   //   });
-  //
-  //   it.optional('getParallelepipedDiagonal should return a diagonal length of the rectangular parallepiped', () => {
-  //     assert.equal(tasks.getParallelepipedDiagonal(1, 1, 1), Math.sqrt(3));
-  //     assert.equal(tasks.getParallelepipedDiagonal(3, 3, 3), Math.sqrt(27));
-  //     assert.equal(tasks.getParallelepipedDiagonal(1, 2, 3), Math.sqrt(14));
-  // });
+
+  it.optional('getParallelepipedDiagonal should return a diagonal length of the rectangular parallepiped', () => {
+    assert.equal(tasks.getParallelepipedDiagonal(1, 1, 1), Math.sqrt(3));
+    assert.equal(tasks.getParallelepipedDiagonal(3, 3, 3), Math.sqrt(27));
+    assert.equal(tasks.getParallelepipedDiagonal(1, 2, 3), Math.sqrt(14));
+  });
 
   it.optional('roundToPowerOfTen should return an number rounded to specified power of 10', () => {
     assert.equal(tasks.roundToPowerOfTen(1234, 0), 1234);
