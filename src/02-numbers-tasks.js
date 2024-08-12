@@ -1,65 +1,61 @@
-// /* *******************************************************************************************
-//  *                                                                                           *
-//  * Please read the following tutorial before implementing tasks:                              *
-//  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates           *
-//  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number   *
-//  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math     *
-//  *                                                                                           *
-//  ******************************************************************************************* */
-//
-//
-// /**
-//  * Returns an area of a rectangle given by width and height.
-//  *
-//  * @param {number} width
-//  * @param {number} height
-//  * @return {number}
-//  *
-//  * @example:
-//  *   5, 10 => 50
-//  *   5, 5  => 25
-//  */
+/* *******************************************************************************************
+ *                                                                                           *
+ * Please read the following tutorial before implementing tasks:                              *
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates           *
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number   *
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math     *
+ *                                                                                           *
+ ******************************************************************************************* */
+
+
+/**
+ * Returns an area of a rectangle given by width and height.
+ *
+ * @param {number} width
+ * @param {number} height
+ * @return {number}
+ *
+ * @example:
+ *   5, 10 => 50
+ *   5, 5  => 25
+ */
 function getRectangleArea(width, height) {
-  // throw new Error('Not implemented');
   return width * height;
 }
 
-//
-// /**
-//  * Returns a circumference of circle given by radius.
-//  *
-//  * @param {number} radius
-//  * @return {number}
-//  *
-//  * @example:
-//  *   5    => 31.41592653589793
-//  *   3.14 => 19.729201864543903
-//  *   0    => 0
-//  */
+
+/**
+ * Returns a circumference of circle given by radius.
+ *
+ * @param {number} radius
+ * @return {number}
+ *
+ * @example:
+ *   5    => 31.41592653589793
+ *   3.14 => 19.729201864543903
+ *   0    => 0
+ */
 function getCircleCircumference(radius) {
   // throw new Error('Not implemented');
   return (2 * Math.PI * radius);
 }
 
-//
-// /**
-//  * Returns an average of two given numbers.
-//  *
-//  * @param {number} value1
-//  * @param {number} value2
-//  * @return {number}
-//  *
-//  * @example:
-//  *   5, 5  => 5
-//  *  10, 0  => 5
-//  *  -3, 3  => 0
-//  */
+
+/**
+ * Returns an average of two given numbers.
+ *
+ * @param {number} value1
+ * @param {number} value2
+ * @return {bigint}
+ *
+ * @example:
+ *   5, 5  => 5
+ *  10, 0  => 5
+ *  -3, 3  => 0
+ */
 // function getAverage(value1, value2) {
-//   // throw new Error('Not implemented');
-//   const sum = value1 + value2;
-//   if (sum < 0) {
-//     return 0;
-//   } return (value1 + value2) / 2;
+//   // eslint-disable-next-line no-undef
+//   return BigInt((value1 + value2) / 2);
 // }
 
 // /**

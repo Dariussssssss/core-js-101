@@ -21,7 +21,7 @@ describe('02-numbers-tasks', () => {
   //   assert.equal(tasks.getAverage(Number.MAX_VALUE - 2, Number.MAX_VALUE), Number.MAX_VALUE - 1);
   //   assert.equal(tasks.getAverage(Number.MAX_VALUE, -Number.MAX_VALUE / 2), Number.MAX_VALUE / 4);
   // });
-  //
+
   it.optional('getDistanceBetweenPoints should return a distance between points', () => {
     assert.equal(tasks.getDistanceBetweenPoints(0, 0, 0, 1), 1);
     assert.equal(tasks.getDistanceBetweenPoints(0, 0, 1, 0), 1);

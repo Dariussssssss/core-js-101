@@ -120,162 +120,162 @@ describe('03-arrays-tasks', () => {
   });
 
 
-//   it.optional('removeFalsyValues should return the specified array without falsy values', () => {
-//     [
-//       {
-//         arr: [0, false, 'cat', NaN, true, ''],
-//         expected: ['cat', true],
-//       }, {
-//         arr: [1, 2, 3, 4, 5, 'false'],
-//         expected: [1, 2, 3, 4, 5, 'false'],
-//       }, {
-//         arr: [false, 0, NaN, '', undefined],
-//         expected: [],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.removeFalsyValues(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('findAllOccurrences should return the number of all occurrences of specified item in an array', () => {
-//     [
-//       {
-//         arr: [0, 0, 1, 1, 1, 2],
-//         item: 1,
-//         expected: 3,
-//       }, {
-//         arr: [1, 2, 3, 4, 5],
-//         item: 0,
-//         expected: 0,
-//       }, {
-//         arr: ['a', 'b', 'c', 'c'],
-//         item: 'c',
-//         expected: 2,
-//       }, {
-//         arr: [null, undefined, null],
-//         item: null,
-//         expected: 2,
-//       }, {
-//         arr: [true, 0, 1, 'true'],
-//         item: true,
-//         expected: 1,
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.findAllOccurrences(data.arr, data.item);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `Number of occurrences of ${JSON.stringify(data.item)} in ${JSON.stringify(data.arr)} is ${data.expected}, but actually ${actual})`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getUpperCaseStrings should convert strings from specified array to uppercase', () => {
-//     [
-//       {
-//         arr: ['permanent-internship', 'glutinous-shriek', 'multiplicative-elevation'],
-//         expected: ['PERMANENT-INTERNSHIP', 'GLUTINOUS-SHRIEK', 'MULTIPLICATIVE-ELEVATION'],
-//       }, {
-//         arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g'],
-//         expected: ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getUpperCaseStrings(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getStringsLength should convert strings from specified array to uppercase', () => {
-//     [
-//       {
-//         arr: ['', 'a', 'bc', 'def', 'ghij'],
-//         expected: [0, 1, 2, 3, 4],
-//       }, {
-//         arr: ['angular', 'react', 'ember'],
-//         expected: [7, 5, 5],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getStringsLength(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('insertItem should insert an item at specified position', () => {
-//     [
-//       {
-//         arr: [1, 3, 4, 5],
-//         item: 2,
-//         index: 1,
-//         expected: [1, 2, 3, 4, 5],
-//       }, {
-//         arr: [1, 'b', 'c'],
-//         item: 'x',
-//         index: 0,
-//         expected: ['x', 1, 'b', 'c'],
-//       },
-//     ].forEach((data) => {
-//       tasks.insertItem(data.arr, data.item, data.index);
-//       assert.deepEqual(
-//         data.arr,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getHead should return the n first items from the specified array', () => {
-//     [
-//       {
-//         arr: [1, 2, 3, 4, 5],
-//         n: 2,
-//         expected: [1, 2],
-//       }, {
-//         arr: ['a', 'b', 'c', 'd'],
-//         n: 3,
-//         expected: ['a', 'b', 'c'],
-//       },
-//     ].forEach((data) => {
-//       assert.deepEqual(
-//         tasks.getHead(data.arr, data.n),
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getTail should return the n last items from the specified array', () => {
-//     [
-//       {
-//         arr: [1, 2, 3, 4, 5],
-//         n: 2,
-//         expected: [4, 5],
-//       }, {
-//         arr: ['a', 'b', 'c', 'd'],
-//         n: 3,
-//         expected: ['b', 'c', 'd'],
-//       },
-//     ].forEach((data) => {
-//       assert.deepEqual(
-//         tasks.getTail(data.arr, data.n),
-//         data.expected,
-//       );
-//     });
-//   });
-//
+  it.optional('removeFalsyValues should return the specified array without falsy values', () => {
+    [
+      {
+        arr: [0, false, 'cat', NaN, true, ''],
+        expected: ['cat', true],
+      }, {
+        arr: [1, 2, 3, 4, 5, 'false'],
+        expected: [1, 2, 3, 4, 5, 'false'],
+      }, {
+        arr: [false, 0, NaN, '', undefined],
+        expected: [],
+      },
+    ].forEach((data) => {
+      const actual = tasks.removeFalsyValues(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+
+  it.optional('findAllOccurrences should return the number of all occurrences of specified item in an array', () => {
+    [
+      {
+        arr: [0, 0, 1, 1, 1, 2],
+        item: 1,
+        expected: 3,
+      }, {
+        arr: [1, 2, 3, 4, 5],
+        item: 0,
+        expected: 0,
+      }, {
+        arr: ['a', 'b', 'c', 'c'],
+        item: 'c',
+        expected: 2,
+      }, {
+        arr: [null, undefined, null],
+        item: null,
+        expected: 2,
+      }, {
+        arr: [true, 0, 1, 'true'],
+        item: true,
+        expected: 1,
+      },
+    ].forEach((data) => {
+      const actual = tasks.findAllOccurrences(data.arr, data.item);
+      assert.equal(
+        actual,
+        data.expected,
+        `Number of occurrences of ${JSON.stringify(data.item)} in ${JSON.stringify(data.arr)} is ${data.expected}, but actually ${actual})`,
+      );
+    });
+  });
+
+
+  it.optional('getUpperCaseStrings should convert strings from specified array to uppercase', () => {
+    [
+      {
+        arr: ['permanent-internship', 'glutinous-shriek', 'multiplicative-elevation'],
+        expected: ['PERMANENT-INTERNSHIP', 'GLUTINOUS-SHRIEK', 'MULTIPLICATIVE-ELEVATION'],
+      }, {
+        arr: ['a', 'b', 'c', 'd', 'e', 'f', 'g'],
+        expected: ['A', 'B', 'C', 'D', 'E', 'F', 'G'],
+      },
+    ].forEach((data) => {
+      const actual = tasks.getUpperCaseStrings(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+
+  it.optional('getStringsLength should convert strings from specified array to uppercase', () => {
+    [
+      {
+        arr: ['', 'a', 'bc', 'def', 'ghij'],
+        expected: [0, 1, 2, 3, 4],
+      }, {
+        arr: ['angular', 'react', 'ember'],
+        expected: [7, 5, 5],
+      },
+    ].forEach((data) => {
+      const actual = tasks.getStringsLength(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+
+  it.optional('insertItem should insert an item at specified position', () => {
+    [
+      {
+        arr: [1, 3, 4, 5],
+        item: 2,
+        index: 1,
+        expected: [1, 2, 3, 4, 5],
+      }, {
+        arr: [1, 'b', 'c'],
+        item: 'x',
+        index: 0,
+        expected: ['x', 1, 'b', 'c'],
+      },
+    ].forEach((data) => {
+      tasks.insertItem(data.arr, data.item, data.index);
+      assert.deepEqual(
+        data.arr,
+        data.expected,
+      );
+    });
+  });
+
+
+  it.optional('getHead should return the n first items from the specified array', () => {
+    [
+      {
+        arr: [1, 2, 3, 4, 5],
+        n: 2,
+        expected: [1, 2],
+      }, {
+        arr: ['a', 'b', 'c', 'd'],
+        n: 3,
+        expected: ['a', 'b', 'c'],
+      },
+    ].forEach((data) => {
+      assert.deepEqual(
+        tasks.getHead(data.arr, data.n),
+        data.expected,
+      );
+    });
+  });
+
+
+  it.optional('getTail should return the n last items from the specified array', () => {
+    [
+      {
+        arr: [1, 2, 3, 4, 5],
+        n: 2,
+        expected: [4, 5],
+      }, {
+        arr: ['a', 'b', 'c', 'd'],
+        n: 3,
+        expected: ['b', 'c', 'd'],
+      },
+    ].forEach((data) => {
+      assert.deepEqual(
+        tasks.getTail(data.arr, data.n),
+        data.expected,
+      );
+    });
+  });
+
 //
 //   it.optional('toCsvText should convert two-dimensional numeric array to CSV format', () => {
 //     [
@@ -304,24 +304,24 @@ describe('03-arrays-tasks', () => {
 //   });
 //
 //
-//   it.optional('toArrayOfSquares should convert numeric array to the array of squares', () => {
-//     [
-//       {
-//         arr: [0, 1, 2, 3, 4, 5],
-//         expected: [0, 1, 4, 9, 16, 25],
-//       }, {
-//         arr: [10, 100, -1],
-//         expected: [100, 10000, 1],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.toArrayOfSquares(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
+  it.optional('toArrayOfSquares should convert numeric array to the array of squares', () => {
+    [
+      {
+        arr: [0, 1, 2, 3, 4, 5],
+        expected: [0, 1, 4, 9, 16, 25],
+      }, {
+        arr: [10, 100, -1],
+        expected: [100, 10000, 1],
+      },
+    ].forEach((data) => {
+      const actual = tasks.toArrayOfSquares(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
 //
 //   it.optional('getMovingSum should convert numeric array to the according array of moving sum', () => {
 //     [
