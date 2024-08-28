@@ -348,27 +348,27 @@ describe('03-arrays-tasks', () => {
 //   });
 //
 //
-//   it.optional('getSecondItems should return every second item from the specified array', () => {
-//     [
-//       {
-//         arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-//         expected: [2, 4, 6, 8, 10],
-//       }, {
-//         arr: ['a', 'b', 'c', null],
-//         expected: ['b', null],
-//       }, {
-//         arr: ['a'],
-//         expected: [],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getSecondItems(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
+  it.optional('getSecondItems should return every second item from the specified array', () => {
+    [
+      {
+        arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        expected: [2, 4, 6, 8, 10],
+      }, {
+        arr: ['a', 'b', 'c', null],
+        expected: ['b', null],
+      }, {
+        arr: ['a'],
+        expected: [],
+      },
+    ].forEach((data) => {
+      const actual = tasks.getSecondItems(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
 //
 //   it.optional('propagateItemsByPositionIndex should propagate every item its position time', () => {
 //     [
@@ -771,30 +771,30 @@ describe('03-arrays-tasks', () => {
 //   });
 //
 //
-//   it.optional('selectMany should return an array of child items from the specified array', () => {
-//     [
-//       {
-//         arr: [[1, 2], [3, 4], [5, 6]],
-//         childrenSelector: (x) => x,
-//         expected: [1, 2, 3, 4, 5, 6],
-//       }, {
-//         arr: [[11, 12, 13, 14, 15], [21, 22, undefined, 23, 24, 25], [31, 32, 34, 35]],
-//         childrenSelector: (x) => x.slice(0, 2),
-//         expected: [11, 12, 21, 22, 31, 32],
-//       }, {
-//         arr: ['one', 'two', 'three'],
-//         childrenSelector: (x) => x.split(''),
-//         expected: ['o', 'n', 'e', 't', 'w', 'o', 't', 'h', 'r', 'e', 'e'],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.selectMany(data.arr, data.childrenSelector);
-//       assert.deepStrictEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
+  it.optional('selectMany should return an array of child items from the specified array', () => {
+    [
+      {
+        arr: [[1, 2], [3, 4], [5, 6]],
+        childrenSelector: (x) => x,
+        expected: [1, 2, 3, 4, 5, 6],
+      }, {
+        arr: [[11, 12, 13, 14, 15], [21, 22, undefined, 23, 24, 25], [31, 32, 34, 35]],
+        childrenSelector: (x) => x.slice(0, 2),
+        expected: [11, 12, 21, 22, 31, 32],
+      }, {
+        arr: ['one', 'two', 'three'],
+        childrenSelector: (x) => x.split(''),
+        expected: ['o', 'n', 'e', 't', 'w', 'o', 't', 'h', 'r', 'e', 'e'],
+      },
+    ].forEach((data) => {
+      const actual = tasks.selectMany(data.arr, data.childrenSelector);
+      assert.deepStrictEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
 //
 //   it.optional('getElementByIndexes should return an element from array by specified indexes', () => {
 //     [

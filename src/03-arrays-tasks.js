@@ -263,9 +263,10 @@ function toArrayOfSquares(arr) {
 //  * [ 'a', 'b', 'c' , null ]  => [ "b", null ]
 //  * [ "a" ] => []
 //  */
-// function getSecondItems(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function getSecondItems(arr) {
+  return arr.filter((el, index) => (index % 2 !== 0));
+}
+
 //
 //
 // /**
@@ -538,9 +539,17 @@ function toArrayOfSquares(arr) {
 // eslint-disable-next-line max-len
 //  *   ['one','two','three'], (x) => x.split('')  =>   ['o','n','e','t','w','o','t','h','r','e','e']
 //  */
-// function selectMany(/* arr, childrenSelector */) {
-//   throw new Error('Not implemented');
-// }
+function selectMany(arr, childrenSelector) {
+  const res = [];
+  let x = [];
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0, len = arr.length; i < len; i++) {
+    x = arr[i];
+    res.push(childrenSelector(x));
+  }
+  return res.flat();
+}
+
 //
 //
 // /**
@@ -598,21 +607,21 @@ module.exports = {
   //   toCsvText,
   //   toStringList,
   toArrayOfSquares,
-//   getMovingSum,
-//   getSecondItems,
-//   propagateItemsByPositionIndex,
-//   get3TopItems,
-//   getPositivesCount,
-//   sortDigitNamesByNumericOrder,
-//   getItemsSum,
-//   getFalsyValuesCount,
-//   findAllOccurrences,
-//   sortCitiesArray,
-//   getIdentityMatrix,
-//   getIntervalArray,
-//   distinct,
-//   group,
-//   selectMany,
+  //   getMovingSum,
+  getSecondItems,
+  //   propagateItemsByPositionIndex,
+  //   get3TopItems,
+  //   getPositivesCount,
+  //   sortDigitNamesByNumericOrder,
+  //   getItemsSum,
+  //   getFalsyValuesCount,
+  //   findAllOccurrences,
+  //   sortCitiesArray,
+  //   getIdentityMatrix,
+  //   getIntervalArray,
+  //   distinct,
+  //   group,
+  selectMany,
 //   getElementByIndexes,
 //   swapHeadAndTail,
 };

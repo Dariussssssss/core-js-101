@@ -323,9 +323,32 @@ function isTriangle(a, b, c) {
 //  *   '{)' = false
 //  *   '{[(<{[]}>)]}' = true
 //  */
-// function isBracketsBalanced(/* str */) {
-//   throw new Error('Not implemented');
-// }
+// eslint-disable-next-line consistent-return
+function isBracketsBalanced(str) {
+  const obj = {
+    '[': ']',
+    '(': ')',
+    '{': '}',
+    '<': '>',
+  };
+  const storage = [];
+  const mStr = str.split('');
+
+  if (str.length % 2 !== 0) return false;
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < mStr.length; i++) {
+    // eslint-disable-next-line no-restricted-syntax
+    for (const key in obj) {
+      if (mStr[i] === key) {
+        storage.push(key);
+      } else if (mStr[i] === obj[key] && storage[storage.length - 1] === key) {
+        storage.pop();
+      }
+    }
+  }
+  return storage.length === 0;
+}
+
 //
 //
 // /**
@@ -433,15 +456,15 @@ module.exports = {
   getFactorial,
   getSumBetweenNumbers,
   isTriangle,
-//   doRectanglesOverlap,
-//   isInsideCircle,
-//   findFirstSingleChar,
-//   getIntervalString,
-//   reverseString,
-//   reverseInteger,
-//   isCreditCardNumber,
-//   getDigitalRoot,
-//   isBracketsBalanced,
+  //   doRectanglesOverlap,
+  //   isInsideCircle,
+  //   findFirstSingleChar,
+  //   getIntervalString,
+  //   reverseString,
+  //   reverseInteger,
+  //   isCreditCardNumber,
+  //   getDigitalRoot,
+  isBracketsBalanced,
 //   toNaryString,
 //   getCommonDirectoryPath,
 //   getMatrixProduct,

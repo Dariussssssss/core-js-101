@@ -228,9 +228,9 @@ function extractEmails(str) {
 //  *
 //  */
 // function getRectangleString(width, height) {
-//   const a = '┌';
-//   const b = '┐\n';
-//   const c = '└';
+//   const a = '┌┐\n';
+//   const b = '││\n';
+//   const c = '└┘\n';
 //   const d = '┘\n';
 //   const w = '─';
 //   let h = '│';
