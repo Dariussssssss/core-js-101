@@ -386,9 +386,12 @@ function getSecondItems(arr) {
 //  *    [ null, undefined, null ], null => 2
 //  *    [ true, 0, 1, 'true' ], true => 1
 //  */
-// function findAllOccurrences(/* arr, item */) {
-//   throw new Error('Not implemented');
-// }
+function findAllOccurrences(arr, item) {
+  // eslint-disable-next-line no-shadow,camelcase
+  const arr_1 = arr.filter((i) => i === item);
+  return arr_1.length;
+}
+
 //
 // /**
 //  * Concatenates all elements from specified array into single string with ',' delimiter
@@ -615,7 +618,7 @@ module.exports = {
   //   sortDigitNamesByNumericOrder,
   //   getItemsSum,
   //   getFalsyValuesCount,
-  //   findAllOccurrences,
+  findAllOccurrences,
   //   sortCitiesArray,
   //   getIdentityMatrix,
   //   getIntervalArray,

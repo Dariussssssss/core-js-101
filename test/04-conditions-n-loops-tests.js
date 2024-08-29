@@ -220,21 +220,21 @@ describe('04-conditions-n-loops-tasks', () => {
 //   });
 //
 //
-//   it.optional('findFirstSingleChar should return the first unrepeated char from string', () => {
-//     [
-//       { str: 'The quick brown fox jumps over the lazy dog', expected: 'T' },
-//       { str: 'abracadabra', expected: 'c' },
-//       { str: 'entente', expected: null },
-//     ].forEach((data) => {
-//       const actual = tasks.findFirstSingleChar(data.str);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `First single char of '${data.str}' = '${data.expected}', but actual '${actual}'`,
-//       );
-//     });
-//   });
-//
+  it.optional('findFirstSingleChar should return the first unrepeated char from string', () => {
+    [
+      { str: 'The quick brown fox jumps over the lazy dog', expected: 'T' },
+      { str: 'abracadabra', expected: 'c' },
+      { str: 'entente', expected: null },
+    ].forEach((data) => {
+      const actual = tasks.findFirstSingleChar(data.str);
+      assert.equal(
+        actual,
+        data.expected,
+        `First single char of '${data.str}' = '${data.expected}', but actual '${actual}'`,
+      );
+    });
+  });
+
 //
 //   it.optional('getIntervalString should return the string representation of math interval', () => {
 //     [
@@ -281,39 +281,39 @@ describe('04-conditions-n-loops-tasks', () => {
 //   });
 //
 //
-//   it.optional('reverseString should return the specified string in reverse order', () => {
-//     [
-//       { str: 'The quick brown fox jumps over the lazy dog', expected: 'god yzal eht revo spmuj xof nworb kciuq ehT' },
-//       { str: 'abracadabra', expected: 'arbadacarba' },
-//       { str: 'rotator', expected: 'rotator' },
-//       { str: 'noon', expected: 'noon' },
-//     ].forEach((data) => {
-//       const actual = tasks.reverseString(data.str);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `Reversed '${data.str}' = '${data.expected}', but actual '${actual}'`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('reverseInteger should return the specified number in reverse order', () => {
-//     [
-//       { num: 12345, expected: 54321 },
-//       { num: 1111, expected: 1111 },
-//       { num: 87354, expected: 45378 },
-//       { num: 34143, expected: 34143 },
-//     ].forEach((data) => {
-//       const actual = tasks.reverseInteger(data.num);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `Reversed ${data.num} = ${data.expected}, but actual ${actual}`,
-//       );
-//     });
-//   });
-//
+  it.optional('reverseString should return the specified string in reverse order', () => {
+    [
+      { str: 'The quick brown fox jumps over the lazy dog', expected: 'god yzal eht revo spmuj xof nworb kciuq ehT' },
+      { str: 'abracadabra', expected: 'arbadacarba' },
+      { str: 'rotator', expected: 'rotator' },
+      { str: 'noon', expected: 'noon' },
+    ].forEach((data) => {
+      const actual = tasks.reverseString(data.str);
+      assert.equal(
+        actual,
+        data.expected,
+        `Reversed '${data.str}' = '${data.expected}', but actual '${actual}'`,
+      );
+    });
+  });
+
+
+  it.optional('reverseInteger should return the specified number in reverse order', () => {
+    [
+      { num: 12345, expected: 54321 },
+      { num: 1111, expected: 1111 },
+      { num: 87354, expected: 45378 },
+      { num: 34143, expected: 34143 },
+    ].forEach((data) => {
+      const actual = tasks.reverseInteger(data.num);
+      assert.equal(
+        actual,
+        data.expected,
+        `Reversed ${data.num} = ${data.expected}, but actual ${actual}`,
+      );
+    });
+  });
+
 //
 //   it.optional('isCreditCardNumber should validate CCN', () => {
 //     [
@@ -361,23 +361,23 @@ describe('04-conditions-n-loops-tasks', () => {
 //   });
 //
 //
-//   it.optional('getDigitalRoot should return the cyclic sum of all digits', () => {
-//     [
-//       { num: 12345, expected: 6 },
-//       { num: 23456, expected: 2 },
-//       { num: 10000, expected: 1 },
-//       { num: 165536, expected: 8 },
-//     ].forEach((data) => {
-//       const actual = tasks.getDigitalRoot(data.num);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `GetDigitalRoot(${data.num}) = ${data.expected}, but actual ${actual}`,
-//       );
-//     });
-//   });
-//
-//
+  it.optional('getDigitalRoot should return the cyclic sum of all digits', () => {
+    [
+      { num: 12345, expected: 6 },
+      { num: 23456, expected: 2 },
+      { num: 10000, expected: 1 },
+      { num: 165536, expected: 8 },
+    ].forEach((data) => {
+      const actual = tasks.getDigitalRoot(data.num);
+      assert.equal(
+        actual,
+        data.expected,
+        `GetDigitalRoot(${data.num}) = ${data.expected}, but actual ${actual}`,
+      );
+    });
+  });
+
+
   it.optional('isBracketsBalanced should check the balanced brackets', () => {
     [
       '[]', '[[][][[]]]', '[[][]]', '', '<>', '{}', '()', '<()>', '{<>}', '[{}]',
