@@ -314,9 +314,20 @@ function propagateItemsByPositionIndex(arr) {
 //  *   [ 1,2,3,4,5,6,7,8,9,10 ] => [ 10, 9, 8 ]
 //  *   [ 10, 10, 10, 10 ] => [ 10, 10, 10 ]
 //  */
-// function get3TopItems(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function get3TopItems(arr) {
+  const sortedArray = arr.slice()
+    .sort((a, b) => b - a);
+  const maxValues = [];
+  // eslint-disable-next-line no-restricted-syntax
+  for (const value of sortedArray) {
+    maxValues.push(value);
+    if (maxValues.length === 3) {
+      break;
+    }
+  }
+  return maxValues;
+}
+
 //
 //
 // /**
@@ -332,9 +343,16 @@ function propagateItemsByPositionIndex(arr) {
 //  *   [ null, 1, 'elephant' ] => 1
 //  *   [ 1, '2' ] => 1
 //  */
-// function getPositivesCount(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function getPositivesCount(arr) {
+  let res = 0;
+  // eslint-disable-next-line no-restricted-syntax
+  for (const value of arr) {
+    // eslint-disable-next-line no-unused-expressions,no-plusplus
+    value > 0 && typeof value === 'number' ? res++ : res;
+  }
+  return res;
+}
+
 //
 // /**
 //  * Sorts digit names
@@ -349,9 +367,22 @@ function propagateItemsByPositionIndex(arr) {
 //  *   [ 'nine','eight','nine','eight'] => [ 'eight','eight','nine','nine']
 //  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
 //  */
-// function sortDigitNamesByNumericOrder(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function sortDigitNamesByNumericOrder(arr) {
+  const digitMap = {
+    zero: 0,
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    nine: 9,
+  };
+  return arr.sort((a, b) => digitMap[a] - digitMap[b]);
+}
+
 //
 // /**
 //  * Returns the sum of all items in the specified array of numbers
@@ -365,9 +396,13 @@ function propagateItemsByPositionIndex(arr) {
 //  *   [ -1, 1, -1, 1 ]      => 0
 //  *   [ 1, 10, 100, 1000 ]  => 1111
 //  */
-// function getItemsSum(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function getItemsSum(arr) {
+  let sum = 0;
+  // eslint-disable-next-line no-return-assign
+  arr.map((el) => sum += el);
+  return sum;
+}
+
 //
 // /**
 //  * Returns the number of all falsy value in the specified array
@@ -381,9 +416,11 @@ function propagateItemsByPositionIndex(arr) {
 //  *  [ -1, 'false', null, 0 ] => 2
 //  *  [ null, undefined, NaN, false, 0, '' ]  => 6
 //  */
-// function getFalsyValuesCount(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function getFalsyValuesCount(arr) {
+  const res = arr.filter((el) => !el);
+  return res.length;
+}
+
 //
 // /**
 //  * Returns a number of all occurrences of the specified item in an array
@@ -627,11 +664,11 @@ module.exports = {
   getMovingSum,
   getSecondItems,
   propagateItemsByPositionIndex,
-  //   get3TopItems,
-  //   getPositivesCount,
-  //   sortDigitNamesByNumericOrder,
-  //   getItemsSum,
-  //   getFalsyValuesCount,
+  get3TopItems,
+  getPositivesCount,
+  sortDigitNamesByNumericOrder,
+  getItemsSum,
+  getFalsyValuesCount,
   findAllOccurrences,
   //   sortCitiesArray,
   //   getIdentityMatrix,

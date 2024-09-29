@@ -397,144 +397,144 @@ describe('03-arrays-tasks', () => {
     });
   });
 
-  //
-  //   it.optional('get3TopItems should return the 3 largest items from integer array', () => {
-  //     [
-  //       {
-  //         arr: [],
-  //         expected: [],
-  //       }, {
-  //         arr: [1, 2],
-  //         expected: [2, 1],
-  //       }, {
-  //         arr: [1, 2, 3],
-  //         expected: [3, 2, 1],
-  //       }, {
-  //         arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-  //         expected: [10, 9, 8],
-  //       }, {
-  //         arr: [10, 10, 10, 10],
-  //         expected: [10, 10, 10],
-  //       },
-  //     ].forEach((data) => {
-  //       const actual = tasks.get3TopItems(data.arr);
-  //       assert.deepEqual(
-  //         actual,
-  //         data.expected,
-  //       );
-  //     });
-  //   });
-  //
-  //
-  //   it.optional('getPositivesCount should return the number of positive integers in the specified array', () => {
-  //     [
-  //       {
-  //         arr: [],
-  //         expected: 0,
-  //       }, {
-  //         arr: [-1, 0, 1],
-  //         expected: 1,
-  //       }, {
-  //         arr: [1, 2, 3],
-  //         expected: 3,
-  //       }, {
-  //         arr: [null, 1, 'elephant'],
-  //         expected: 1,
-  //       }, {
-  //         arr: [1, '2'],
-  //         expected: 1,
-  //       },
-  //     ].forEach((data) => {
-  //       const actual = tasks.getPositivesCount(data.arr);
-  //       assert.equal(
-  //         actual,
-  //         data.expected,
-  //         `Test failed for argument [${data.arr}]`,
-  //       );
-  //     });
-  //   });
-  //
-  //
-  //   it.optional('sortDigitNamesByNumericOrder should sort digit names by its numeric value', () => {
-  //     [
-  //       {
-  //         arr: [],
-  //         expected: [],
-  //       }, {
-  //         arr: ['nine', 'one'],
-  //         expected: ['one', 'nine'],
-  //       }, {
-  //         arr: ['one', 'two', 'three'],
-  //         expected: ['one', 'two', 'three'],
-  //       }, {
-  //         arr: ['nine', 'eight', 'nine', 'eight'],
-  //         expected: ['eight', 'eight', 'nine', 'nine'],
-  //       }, {
-  //         arr: ['one', 'one', 'one', 'zero'],
-  //         expected: ['zero', 'one', 'one', 'one'],
-  //       }, {
-  //         arr: ['nine', 'eight', 'seven', 'six', 'five', 'four', 'three', 'two', 'one', 'zero'],
-  //         expected: ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'],
-  //       },
-  //     ].forEach((data) => {
-  //       const actual = tasks.sortDigitNamesByNumericOrder(data.arr);
-  //       assert.deepEqual(
-  //         actual,
-  //         data.expected,
-  //       );
-  //     });
-  //   });
-  //
-  //
-  //   it.optional('getItemsSum should return the sum of all items of numbers array', () => {
-  //     [
-  //       {
-  //         arr: [],
-  //         expected: 0,
-  //       }, {
-  //         arr: [1, 2, 3],
-  //         expected: 6,
-  //       }, {
-  //         arr: [1, 10, 100, 1000],
-  //         expected: 1111,
-  //       },
-  //     ].forEach((data) => {
-  //       const actual = tasks.getItemsSum(data.arr);
-  //       assert.deepEqual(
-  //         actual,
-  //         data.expected,
-  //         `Test failed for [${data.arr}]`,
-  //       );
-  //     });
-  //   });
-  //
-  //
-  //   it.optional('getFalsyValuesCount should return the number of falsy value in the specified array', () => {
-  //     [
-  //       {
-  //         arr: [],
-  //         expected: 0,
-  //       }, {
-  //         arr: [1, '', 3],
-  //         expected: 1,
-  //       }, {
-  //         arr: [-1, 'false', null, 0],
-  //         expected: 2,
-  //       }, {
-  //         arr: [null, undefined, NaN, false, 0, ''],
-  //         expected: 6,
-  //       },
-  //     ].forEach((data) => {
-  //       const actual = tasks.getFalsyValuesCount(data.arr);
-  //       assert.deepEqual(
-  //         actual,
-  //         data.expected,
-  //         `Test failed for [${data.arr}]`,
-  //       );
-  //     });
-  //   });
-  //
-  //
+
+  it.optional('get3TopItems should return the 3 largest items from integer array', () => {
+    [
+      {
+        arr: [],
+        expected: [],
+      }, {
+        arr: [1, 2],
+        expected: [2, 1],
+      }, {
+        arr: [1, 2, 3],
+        expected: [3, 2, 1],
+      }, {
+        arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        expected: [10, 9, 8],
+      }, {
+        arr: [10, 10, 10, 10],
+        expected: [10, 10, 10],
+      },
+    ].forEach((data) => {
+      const actual = tasks.get3TopItems(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+
+  it.optional('getPositivesCount should return the number of positive integers in the specified array', () => {
+    [
+      {
+        arr: [],
+        expected: 0,
+      }, {
+        arr: [-1, 0, 1],
+        expected: 1,
+      }, {
+        arr: [1, 2, 3],
+        expected: 3,
+      }, {
+        arr: [null, 1, 'elephant'],
+        expected: 1,
+      }, {
+        arr: [1, '2'],
+        expected: 1,
+      },
+    ].forEach((data) => {
+      const actual = tasks.getPositivesCount(data.arr);
+      assert.equal(
+        actual,
+        data.expected,
+        `Test failed for argument [${data.arr}]`,
+      );
+    });
+  });
+
+
+  it.optional('sortDigitNamesByNumericOrder should sort digit names by its numeric value', () => {
+    [
+      {
+        arr: [],
+        expected: [],
+      }, {
+        arr: ['nine', 'one'],
+        expected: ['one', 'nine'],
+      }, {
+        arr: ['one', 'two', 'three'],
+        expected: ['one', 'two', 'three'],
+      }, {
+        arr: ['nine', 'eight', 'nine', 'eight'],
+        expected: ['eight', 'eight', 'nine', 'nine'],
+      }, {
+        arr: ['one', 'one', 'one', 'zero'],
+        expected: ['zero', 'one', 'one', 'one'],
+      }, {
+        arr: ['nine', 'eight', 'seven', 'six', 'five', 'four', 'three', 'two', 'one', 'zero'],
+        expected: ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'],
+      },
+    ].forEach((data) => {
+      const actual = tasks.sortDigitNamesByNumericOrder(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+
+  it.optional('getItemsSum should return the sum of all items of numbers array', () => {
+    [
+      {
+        arr: [],
+        expected: 0,
+      }, {
+        arr: [1, 2, 3],
+        expected: 6,
+      }, {
+        arr: [1, 10, 100, 1000],
+        expected: 1111,
+      },
+    ].forEach((data) => {
+      const actual = tasks.getItemsSum(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+        `Test failed for [${data.arr}]`,
+      );
+    });
+  });
+
+
+  it.optional('getFalsyValuesCount should return the number of falsy value in the specified array', () => {
+    [
+      {
+        arr: [],
+        expected: 0,
+      }, {
+        arr: [1, '', 3],
+        expected: 1,
+      }, {
+        arr: [-1, 'false', null, 0],
+        expected: 2,
+      }, {
+        arr: [null, undefined, NaN, false, 0, ''],
+        expected: 6,
+      },
+    ].forEach((data) => {
+      const actual = tasks.getFalsyValuesCount(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+        `Test failed for [${data.arr}]`,
+      );
+    });
+  });
+
+
   it.optional('toStringList should return the string list of passed arguments', () => {
     [
       {
