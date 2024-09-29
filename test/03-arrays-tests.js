@@ -276,34 +276,34 @@ describe('03-arrays-tasks', () => {
     });
   });
 
-//
-//   it.optional('toCsvText should convert two-dimensional numeric array to CSV format', () => {
-//     [
-//       {
-//         arr: [
-//           [0, 1, 2, 3, 4],
-//           [10, 11, 12, 13, 14],
-//           [20, 21, 22, 23, 24],
-//           [30, 31, 32, 33, 34],
-//         ],
-//         expected: '0,1,2,3,4\n'
-//           + '10,11,12,13,14\n'
-//           + '20,21,22,23,24\n'
-//           + '30,31,32,33,34',
-//       }, {
-//         arr: [[]],
-//         expected: '',
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.toCsvText(data.arr);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
+
+  it.optional('toCsvText should convert two-dimensional numeric array to CSV format', () => {
+    [
+      {
+        arr: [
+          [0, 1, 2, 3, 4],
+          [10, 11, 12, 13, 14],
+          [20, 21, 22, 23, 24],
+          [30, 31, 32, 33, 34],
+        ],
+        expected: '0,1,2,3,4\n'
+          + '10,11,12,13,14\n'
+          + '20,21,22,23,24\n'
+          + '30,31,32,33,34',
+      }, {
+        arr: [[]],
+        expected: '',
+      },
+    ].forEach((data) => {
+      const actual = tasks.toCsvText(data.arr);
+      assert.equal(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+
   it.optional('toArrayOfSquares should convert numeric array to the array of squares', () => {
     [
       {
@@ -322,32 +322,32 @@ describe('03-arrays-tasks', () => {
     });
   });
 
-//
-//   it.optional('getMovingSum should convert numeric array to the according array of moving sum', () => {
-//     [
-//       {
-//         arr: [1, 1, 1, 1, 1],
-//         expected: [1, 2, 3, 4, 5],
-//       }, {
-//         arr: [10, -10, 10, -10, 10],
-//         expected: [10, 0, 10, 0, 10],
-//       }, {
-//         arr: [0, 0, 0, 0, 0],
-//         expected: [0, 0, 0, 0, 0],
-//       }, {
-//         arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-//         expected: [1, 3, 6, 10, 15, 21, 28, 36, 45, 55],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getMovingSum(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
+
+  it.optional('getMovingSum should convert numeric array to the according array of moving sum', () => {
+    [
+      {
+        arr: [1, 1, 1, 1, 1],
+        expected: [1, 2, 3, 4, 5],
+      }, {
+        arr: [10, -10, 10, -10, 10],
+        expected: [10, 0, 10, 0, 10],
+      }, {
+        arr: [0, 0, 0, 0, 0],
+        expected: [0, 0, 0, 0, 0],
+      }, {
+        arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        expected: [1, 3, 6, 10, 15, 21, 28, 36, 45, 55],
+      },
+    ].forEach((data) => {
+      const actual = tasks.getMovingSum(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+
   it.optional('getSecondItems should return every second item from the specified array', () => {
     [
       {
@@ -369,408 +369,408 @@ describe('03-arrays-tasks', () => {
     });
   });
 
-//
-//   it.optional('propagateItemsByPositionIndex should propagate every item its position time', () => {
-//     [
-//       {
-//         arr: [],
-//         expected: [],
-//       }, {
-//         arr: [1],
-//         expected: [1],
-//       }, {
-//         arr: ['a', 'b'],
-//         expected: ['a', 'b', 'b'],
-//       }, {
-//         arr: ['a', 'b', 'c', null],
-//         expected: ['a', 'b', 'b', 'c', 'c', 'c', null, null, null, null],
-//       }, {
-//         arr: [1, 2, 3, 4, 5],
-//         expected: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.propagateItemsByPositionIndex(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('get3TopItems should return the 3 largest items from integer array', () => {
-//     [
-//       {
-//         arr: [],
-//         expected: [],
-//       }, {
-//         arr: [1, 2],
-//         expected: [2, 1],
-//       }, {
-//         arr: [1, 2, 3],
-//         expected: [3, 2, 1],
-//       }, {
-//         arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-//         expected: [10, 9, 8],
-//       }, {
-//         arr: [10, 10, 10, 10],
-//         expected: [10, 10, 10],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.get3TopItems(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getPositivesCount should return the number of positive integers in the specified array', () => {
-//     [
-//       {
-//         arr: [],
-//         expected: 0,
-//       }, {
-//         arr: [-1, 0, 1],
-//         expected: 1,
-//       }, {
-//         arr: [1, 2, 3],
-//         expected: 3,
-//       }, {
-//         arr: [null, 1, 'elephant'],
-//         expected: 1,
-//       }, {
-//         arr: [1, '2'],
-//         expected: 1,
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getPositivesCount(data.arr);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `Test failed for argument [${data.arr}]`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('sortDigitNamesByNumericOrder should sort digit names by its numeric value', () => {
-//     [
-//       {
-//         arr: [],
-//         expected: [],
-//       }, {
-//         arr: ['nine', 'one'],
-//         expected: ['one', 'nine'],
-//       }, {
-//         arr: ['one', 'two', 'three'],
-//         expected: ['one', 'two', 'three'],
-//       }, {
-//         arr: ['nine', 'eight', 'nine', 'eight'],
-//         expected: ['eight', 'eight', 'nine', 'nine'],
-//       }, {
-//         arr: ['one', 'one', 'one', 'zero'],
-//         expected: ['zero', 'one', 'one', 'one'],
-//       }, {
-//         arr: ['nine', 'eight', 'seven', 'six', 'five', 'four', 'three', 'two', 'one', 'zero'],
-//         expected: ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.sortDigitNamesByNumericOrder(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getItemsSum should return the sum of all items of numbers array', () => {
-//     [
-//       {
-//         arr: [],
-//         expected: 0,
-//       }, {
-//         arr: [1, 2, 3],
-//         expected: 6,
-//       }, {
-//         arr: [1, 10, 100, 1000],
-//         expected: 1111,
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getItemsSum(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//         `Test failed for [${data.arr}]`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getFalsyValuesCount should return the number of falsy value in the specified array', () => {
-//     [
-//       {
-//         arr: [],
-//         expected: 0,
-//       }, {
-//         arr: [1, '', 3],
-//         expected: 1,
-//       }, {
-//         arr: [-1, 'false', null, 0],
-//         expected: 2,
-//       }, {
-//         arr: [null, undefined, NaN, false, 0, ''],
-//         expected: 6,
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getFalsyValuesCount(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//         `Test failed for [${data.arr}]`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('toStringList should return the string list of passed arguments', () => {
-//     [
-//       {
-//         arr: [0, false, 'cat', NaN, true, ''],
-//         expected: '0,false,cat,NaN,true,',
-//       }, {
-//         arr: [1, 2, 3, 4, 5],
-//         expected: '1,2,3,4,5',
-//       }, {
-//         arr: ['rock', 'paper', 'scissors'],
-//         expected: 'rock,paper,scissors',
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.toStringList(data.arr);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('sortCitiesArray should sort the array of objects using two keys', () => {
-//     [
-//       {
-//         arr: [
-//           { country: 'Russia', city: 'Moscow' },
-//           { country: 'Belarus', city: 'Minsk' },
-//           { country: 'Poland', city: 'Warsaw' },
-//           { country: 'Russia', city: 'Saint Petersburg' },
-//           { country: 'Poland', city: 'Krakow' },
-//           { country: 'Belarus', city: 'Brest' },
-//         ],
-//         expected: [
-//           { country: 'Belarus', city: 'Brest' },
-//           { country: 'Belarus', city: 'Minsk' },
-//           { country: 'Poland', city: 'Krakow' },
-//           { country: 'Poland', city: 'Warsaw' },
-//           { country: 'Russia', city: 'Moscow' },
-//           { country: 'Russia', city: 'Saint Petersburg' },
-//         ],
-//       }, {
-//         arr: [
-//           { country: 'D', city: '1' },
-//           { country: 'E', city: '1' },
-//           { country: 'A', city: '2' },
-//           { country: 'B', city: '1' },
-//           { country: 'B', city: '2' },
-//           { country: 'A', city: '1' },
-//         ],
-//         expected: [
-//           { country: 'A', city: '1' },
-//           { country: 'A', city: '2' },
-//           { country: 'B', city: '1' },
-//           { country: 'B', city: '2' },
-//           { country: 'D', city: '1' },
-//           { country: 'E', city: '1' },
-//         ],
-//       }, {
-//         arr: [
-//           { country: '5', city: '1' },
-//           { country: '1', city: '1' },
-//           { country: '1', city: '2' },
-//           { country: '1', city: '3' },
-//           { country: '2', city: '2' },
-//           { country: '1', city: '1' },
-//           { country: '1', city: '1' },
-//           { country: '2', city: '1' },
-//           { country: '3', city: '1' },
-//           { country: '3', city: '3' },
-//           { country: '2', city: '5' },
-//           { country: '5', city: '2' },
-//         ],
-//         expected: [
-//           { country: '1', city: '1' },
-//           { country: '1', city: '1' },
-//           { country: '1', city: '1' },
-//           { country: '1', city: '2' },
-//           { country: '1', city: '3' },
-//           { country: '2', city: '1' },
-//           { country: '2', city: '2' },
-//           { country: '2', city: '5' },
-//           { country: '3', city: '1' },
-//           { country: '3', city: '3' },
-//           { country: '5', city: '1' },
-//           { country: '5', city: '2' },
-//         ],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.sortCitiesArray(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getIdentityMatrix should return the identity matrix of the specified size', () => {
-//     [
-//       {
-//         n: 1,
-//         expected: [[1]],
-//       }, {
-//         n: 2,
-//         expected: [[1, 0],
-//           [0, 1]],
-//       }, {
-//         n: 5,
-//         expected: [[1, 0, 0, 0, 0],
-//           [0, 1, 0, 0, 0],
-//           [0, 0, 1, 0, 0],
-//           [0, 0, 0, 1, 0],
-//           [0, 0, 0, 0, 1]],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getIdentityMatrix(data.n);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getIntervalArray should return the array of integers from start to end (inclusive)', () => {
-//     [
-//       {
-//         start: 1,
-//         end: 5,
-//         expected: [1, 2, 3, 4, 5],
-//       }, {
-//         start: -2,
-//         end: 2,
-//         expected: [-2, -1, 0, 1, 2],
-//       }, {
-//         start: 0,
-//         end: 100,
-//         expected: [
-//           0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-//           20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
-//           40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
-//           60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
-//           80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99,
-//           100,
-//         ],
-//       }, {
-//         start: 3,
-//         end: 3,
-//         expected: [3],
-//       },
-//       {
-//         start: -5,
-//         end: -3,
-//         expected: [-5, -4, -3],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getIntervalArray(data.start, data.end);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('distinct should return an array of unique items from the specified array', () => {
-//     [
-//       {
-//         arr: [1, 2, 3, 3, 2, 1],
-//         expected: [1, 2, 3],
-//       }, {
-//         arr: ['a', 'a', 'a', 'a', 'a'],
-//         expected: ['a'],
-//       }, {
-//         arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-//         expected: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-//       }, {
-//         arr: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
-//         expected: [1, 2, 3, 4, 5, 6],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.distinct(data.arr);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//       );
-//     });
-//   });
-//
-//   it.optional('group should return a map of grouped data by key and value selector', () => {
-//     [
-//       {
-//         arr: [
-//           { country: 'Belarus', city: 'Brest' },
-//           { country: 'Russia', city: 'Omsk' },
-//           { country: 'Russia', city: 'Samara' },
-//           { country: 'Belarus', city: 'Grodno' },
-//           { country: 'Belarus', city: 'Minsk' },
-//           { country: 'Poland', city: 'Lodz' },
-//         ],
-//         keySelector: (item) => item.country,
-//         valueSelector: (item) => item.city,
-//         expected: new Map([
-//           ['Belarus', ['Brest', 'Grodno', 'Minsk']],
-//           ['Russia', ['Omsk', 'Samara']],
-//           ['Poland', ['Lodz']],
-//         ]),
-//       }, {
-//         arr: [
-//           { artist: 'ACDC', album: 'Highway to Hell' },
-//           { artist: 'Metallica', album: "Kill'em All" },
-//           { artist: 'Deep Purple', album: 'Machine Head' },
-//           { artist: 'Metallica', album: 'And Justice for All' },
-//           { artist: 'ACDC', album: 'Back in Black' },
-//           { artist: 'Manowar', album: 'Kings of Metal' },
-//         ],
-//         keySelector: (item) => item.artist,
-//         valueSelector: (item) => item.album,
-//         expected: new Map([
-//           ['ACDC', ['Highway to Hell', 'Back in Black']],
-//           ['Metallica', ["Kill'em All", 'And Justice for All']],
-//           ['Deep Purple', ['Machine Head']],
-//           ['Manowar', ['Kings of Metal']],
-//         ]),
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.group(data.arr, data.keySelector, data.valueSelector);
-//       assert.deepEqual(
-//         Array.from(actual),
-//         Array.from(data.expected),
-//       );
-//     });
-//   });
-//
-//
+
+  it.optional('propagateItemsByPositionIndex should propagate every item its position time', () => {
+    [
+      {
+        arr: [],
+        expected: [],
+      }, {
+        arr: [1],
+        expected: [1],
+      }, {
+        arr: ['a', 'b'],
+        expected: ['a', 'b', 'b'],
+      }, {
+        arr: ['a', 'b', 'c', null],
+        expected: ['a', 'b', 'b', 'c', 'c', 'c', null, null, null, null],
+      }, {
+        arr: [1, 2, 3, 4, 5],
+        expected: [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5],
+      },
+    ].forEach((data) => {
+      const actual = tasks.propagateItemsByPositionIndex(data.arr);
+      assert.deepEqual(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+  //
+  //   it.optional('get3TopItems should return the 3 largest items from integer array', () => {
+  //     [
+  //       {
+  //         arr: [],
+  //         expected: [],
+  //       }, {
+  //         arr: [1, 2],
+  //         expected: [2, 1],
+  //       }, {
+  //         arr: [1, 2, 3],
+  //         expected: [3, 2, 1],
+  //       }, {
+  //         arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  //         expected: [10, 9, 8],
+  //       }, {
+  //         arr: [10, 10, 10, 10],
+  //         expected: [10, 10, 10],
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.get3TopItems(data.arr);
+  //       assert.deepEqual(
+  //         actual,
+  //         data.expected,
+  //       );
+  //     });
+  //   });
+  //
+  //
+  //   it.optional('getPositivesCount should return the number of positive integers in the specified array', () => {
+  //     [
+  //       {
+  //         arr: [],
+  //         expected: 0,
+  //       }, {
+  //         arr: [-1, 0, 1],
+  //         expected: 1,
+  //       }, {
+  //         arr: [1, 2, 3],
+  //         expected: 3,
+  //       }, {
+  //         arr: [null, 1, 'elephant'],
+  //         expected: 1,
+  //       }, {
+  //         arr: [1, '2'],
+  //         expected: 1,
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.getPositivesCount(data.arr);
+  //       assert.equal(
+  //         actual,
+  //         data.expected,
+  //         `Test failed for argument [${data.arr}]`,
+  //       );
+  //     });
+  //   });
+  //
+  //
+  //   it.optional('sortDigitNamesByNumericOrder should sort digit names by its numeric value', () => {
+  //     [
+  //       {
+  //         arr: [],
+  //         expected: [],
+  //       }, {
+  //         arr: ['nine', 'one'],
+  //         expected: ['one', 'nine'],
+  //       }, {
+  //         arr: ['one', 'two', 'three'],
+  //         expected: ['one', 'two', 'three'],
+  //       }, {
+  //         arr: ['nine', 'eight', 'nine', 'eight'],
+  //         expected: ['eight', 'eight', 'nine', 'nine'],
+  //       }, {
+  //         arr: ['one', 'one', 'one', 'zero'],
+  //         expected: ['zero', 'one', 'one', 'one'],
+  //       }, {
+  //         arr: ['nine', 'eight', 'seven', 'six', 'five', 'four', 'three', 'two', 'one', 'zero'],
+  //         expected: ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'],
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.sortDigitNamesByNumericOrder(data.arr);
+  //       assert.deepEqual(
+  //         actual,
+  //         data.expected,
+  //       );
+  //     });
+  //   });
+  //
+  //
+  //   it.optional('getItemsSum should return the sum of all items of numbers array', () => {
+  //     [
+  //       {
+  //         arr: [],
+  //         expected: 0,
+  //       }, {
+  //         arr: [1, 2, 3],
+  //         expected: 6,
+  //       }, {
+  //         arr: [1, 10, 100, 1000],
+  //         expected: 1111,
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.getItemsSum(data.arr);
+  //       assert.deepEqual(
+  //         actual,
+  //         data.expected,
+  //         `Test failed for [${data.arr}]`,
+  //       );
+  //     });
+  //   });
+  //
+  //
+  //   it.optional('getFalsyValuesCount should return the number of falsy value in the specified array', () => {
+  //     [
+  //       {
+  //         arr: [],
+  //         expected: 0,
+  //       }, {
+  //         arr: [1, '', 3],
+  //         expected: 1,
+  //       }, {
+  //         arr: [-1, 'false', null, 0],
+  //         expected: 2,
+  //       }, {
+  //         arr: [null, undefined, NaN, false, 0, ''],
+  //         expected: 6,
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.getFalsyValuesCount(data.arr);
+  //       assert.deepEqual(
+  //         actual,
+  //         data.expected,
+  //         `Test failed for [${data.arr}]`,
+  //       );
+  //     });
+  //   });
+  //
+  //
+  it.optional('toStringList should return the string list of passed arguments', () => {
+    [
+      {
+        arr: [0, false, 'cat', NaN, true, ''],
+        expected: '0,false,cat,NaN,true,',
+      }, {
+        arr: [1, 2, 3, 4, 5],
+        expected: '1,2,3,4,5',
+      }, {
+        arr: ['rock', 'paper', 'scissors'],
+        expected: 'rock,paper,scissors',
+      },
+    ].forEach((data) => {
+      const actual = tasks.toStringList(data.arr);
+      assert.equal(
+        actual,
+        data.expected,
+      );
+    });
+  });
+
+  //
+  //   it.optional('sortCitiesArray should sort the array of objects using two keys', () => {
+  //     [
+  //       {
+  //         arr: [
+  //           { country: 'Russia', city: 'Moscow' },
+  //           { country: 'Belarus', city: 'Minsk' },
+  //           { country: 'Poland', city: 'Warsaw' },
+  //           { country: 'Russia', city: 'Saint Petersburg' },
+  //           { country: 'Poland', city: 'Krakow' },
+  //           { country: 'Belarus', city: 'Brest' },
+  //         ],
+  //         expected: [
+  //           { country: 'Belarus', city: 'Brest' },
+  //           { country: 'Belarus', city: 'Minsk' },
+  //           { country: 'Poland', city: 'Krakow' },
+  //           { country: 'Poland', city: 'Warsaw' },
+  //           { country: 'Russia', city: 'Moscow' },
+  //           { country: 'Russia', city: 'Saint Petersburg' },
+  //         ],
+  //       }, {
+  //         arr: [
+  //           { country: 'D', city: '1' },
+  //           { country: 'E', city: '1' },
+  //           { country: 'A', city: '2' },
+  //           { country: 'B', city: '1' },
+  //           { country: 'B', city: '2' },
+  //           { country: 'A', city: '1' },
+  //         ],
+  //         expected: [
+  //           { country: 'A', city: '1' },
+  //           { country: 'A', city: '2' },
+  //           { country: 'B', city: '1' },
+  //           { country: 'B', city: '2' },
+  //           { country: 'D', city: '1' },
+  //           { country: 'E', city: '1' },
+  //         ],
+  //       }, {
+  //         arr: [
+  //           { country: '5', city: '1' },
+  //           { country: '1', city: '1' },
+  //           { country: '1', city: '2' },
+  //           { country: '1', city: '3' },
+  //           { country: '2', city: '2' },
+  //           { country: '1', city: '1' },
+  //           { country: '1', city: '1' },
+  //           { country: '2', city: '1' },
+  //           { country: '3', city: '1' },
+  //           { country: '3', city: '3' },
+  //           { country: '2', city: '5' },
+  //           { country: '5', city: '2' },
+  //         ],
+  //         expected: [
+  //           { country: '1', city: '1' },
+  //           { country: '1', city: '1' },
+  //           { country: '1', city: '1' },
+  //           { country: '1', city: '2' },
+  //           { country: '1', city: '3' },
+  //           { country: '2', city: '1' },
+  //           { country: '2', city: '2' },
+  //           { country: '2', city: '5' },
+  //           { country: '3', city: '1' },
+  //           { country: '3', city: '3' },
+  //           { country: '5', city: '1' },
+  //           { country: '5', city: '2' },
+  //         ],
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.sortCitiesArray(data.arr);
+  //       assert.deepEqual(
+  //         actual,
+  //         data.expected,
+  //       );
+  //     });
+  //   });
+  //
+  //
+  //   it.optional('getIdentityMatrix should return the identity matrix of the specified size', () => {
+  //     [
+  //       {
+  //         n: 1,
+  //         expected: [[1]],
+  //       }, {
+  //         n: 2,
+  //         expected: [[1, 0],
+  //           [0, 1]],
+  //       }, {
+  //         n: 5,
+  //         expected: [[1, 0, 0, 0, 0],
+  //           [0, 1, 0, 0, 0],
+  //           [0, 0, 1, 0, 0],
+  //           [0, 0, 0, 1, 0],
+  //           [0, 0, 0, 0, 1]],
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.getIdentityMatrix(data.n);
+  //       assert.deepEqual(
+  //         actual,
+  //         data.expected,
+  //       );
+  //     });
+  //   });
+  //
+  //
+  //   it.optional('getIntervalArray should return the array of integers from start to end (inclusive)', () => {
+  //     [
+  //       {
+  //         start: 1,
+  //         end: 5,
+  //         expected: [1, 2, 3, 4, 5],
+  //       }, {
+  //         start: -2,
+  //         end: 2,
+  //         expected: [-2, -1, 0, 1, 2],
+  //       }, {
+  //         start: 0,
+  //         end: 100,
+  //         expected: [
+  //           0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+  //           20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+  //           40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
+  //           60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79,
+  //           80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99,
+  //           100,
+  //         ],
+  //       }, {
+  //         start: 3,
+  //         end: 3,
+  //         expected: [3],
+  //       },
+  //       {
+  //         start: -5,
+  //         end: -3,
+  //         expected: [-5, -4, -3],
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.getIntervalArray(data.start, data.end);
+  //       assert.deepEqual(
+  //         actual,
+  //         data.expected,
+  //       );
+  //     });
+  //   });
+  //
+  //
+  //   it.optional('distinct should return an array of unique items from the specified array', () => {
+  //     [
+  //       {
+  //         arr: [1, 2, 3, 3, 2, 1],
+  //         expected: [1, 2, 3],
+  //       }, {
+  //         arr: ['a', 'a', 'a', 'a', 'a'],
+  //         expected: ['a'],
+  //       }, {
+  //         arr: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  //         expected: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  //       }, {
+  //         arr: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
+  //         expected: [1, 2, 3, 4, 5, 6],
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.distinct(data.arr);
+  //       assert.deepEqual(
+  //         actual,
+  //         data.expected,
+  //       );
+  //     });
+  //   });
+  //
+  //   it.optional('group should return a map of grouped data by key and value selector', () => {
+  //     [
+  //       {
+  //         arr: [
+  //           { country: 'Belarus', city: 'Brest' },
+  //           { country: 'Russia', city: 'Omsk' },
+  //           { country: 'Russia', city: 'Samara' },
+  //           { country: 'Belarus', city: 'Grodno' },
+  //           { country: 'Belarus', city: 'Minsk' },
+  //           { country: 'Poland', city: 'Lodz' },
+  //         ],
+  //         keySelector: (item) => item.country,
+  //         valueSelector: (item) => item.city,
+  //         expected: new Map([
+  //           ['Belarus', ['Brest', 'Grodno', 'Minsk']],
+  //           ['Russia', ['Omsk', 'Samara']],
+  //           ['Poland', ['Lodz']],
+  //         ]),
+  //       }, {
+  //         arr: [
+  //           { artist: 'ACDC', album: 'Highway to Hell' },
+  //           { artist: 'Metallica', album: "Kill'em All" },
+  //           { artist: 'Deep Purple', album: 'Machine Head' },
+  //           { artist: 'Metallica', album: 'And Justice for All' },
+  //           { artist: 'ACDC', album: 'Back in Black' },
+  //           { artist: 'Manowar', album: 'Kings of Metal' },
+  //         ],
+  //         keySelector: (item) => item.artist,
+  //         valueSelector: (item) => item.album,
+  //         expected: new Map([
+  //           ['ACDC', ['Highway to Hell', 'Back in Black']],
+  //           ['Metallica', ["Kill'em All", 'And Justice for All']],
+  //           ['Deep Purple', ['Machine Head']],
+  //           ['Manowar', ['Kings of Metal']],
+  //         ]),
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.group(data.arr, data.keySelector, data.valueSelector);
+  //       assert.deepEqual(
+  //         Array.from(actual),
+  //         Array.from(data.expected),
+  //       );
+  //     });
+  //   });
+  //
+  //
   it.optional('selectMany should return an array of child items from the specified array', () => {
     [
       {

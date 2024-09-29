@@ -212,9 +212,15 @@ function getTail(arr, n) {
 //  *    +'20,21,22,23,24\n'
 //  *    +'30,31,32,33,34'
 //  */
-// function toCsvText(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function toCsvText(arr) {
+  let res = '';
+  const a1 = arr.map((el) => {
+    res = `${el.join(',')}`;
+    return res;
+  });
+  return a1.join('\n');
+}
+
 //
 // /**
 //  * Transforms the numeric array into the according array of squares:
@@ -248,9 +254,13 @@ function toArrayOfSquares(arr) {
 //  *   [ 0, 0, 0, 0, 0]         => [ 0, 0, 0, 0, 0]
 //  *   [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ] => [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]
 //  */
-// function getMovingSum(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function getMovingSum(arr) {
+  // eslint-disable-next-line no-unused-vars
+  let res = 0;
+  // eslint-disable-next-line no-return-assign
+  return arr.map((el) => res += el);
+}
+
 //
 // /**
 //  * Returns every second item from the specified array:
@@ -283,9 +293,12 @@ function getSecondItems(arr) {
 //  *  [ 'a', 'b', 'c', null ] => [ 'a', 'b','b', 'c','c','c',  null,null,null,null ]
 //  *  [ 1,2,3,4,5 ] => [ 1, 2,2, 3,3,3, 4,4,4,4, 5,5,5,5,5 ]
 //  */
-// function propagateItemsByPositionIndex(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function propagateItemsByPositionIndex(arr) {
+  const res = arr.map((el, index) => (new Array(index + 1)
+    .fill(el)));
+  return arr.length !== 0 ? res.flat() : arr;
+}
+
 //
 //
 // /**
@@ -403,10 +416,11 @@ function findAllOccurrences(arr, item) {
 //  *    [0, false, 'cat', NaN, true, '']  => '0,false,cat,NaN,true,'
 //  *    [1, 2, 3, 4, 5]                   => '1,2,3,4,5'
 //  *    ['rock', 'paper', 'scissors']     => 'rock,paper,scissors'
-//  */
-// function toStringList(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+
+function toStringList(arr) {
+  return arr.join(',');
+}
+
 //
 //
 // /**
@@ -607,12 +621,12 @@ module.exports = {
   insertItem,
   getHead,
   getTail,
-  //   toCsvText,
-  //   toStringList,
+  toCsvText,
+  toStringList,
   toArrayOfSquares,
-  //   getMovingSum,
+  getMovingSum,
   getSecondItems,
-  //   propagateItemsByPositionIndex,
+  propagateItemsByPositionIndex,
   //   get3TopItems,
   //   getPositivesCount,
   //   sortDigitNamesByNumericOrder,
