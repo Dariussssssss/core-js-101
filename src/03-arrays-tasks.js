@@ -486,9 +486,11 @@ function toStringList(arr) {
 //  *      { country: 'Russia',  city: 'Saint Petersburg' }
 //  *    ]
 //  */
-// function sortCitiesArray(/* arr */) {
-//   throw new Error('Not implemented');
+// function sortCitiesArray(arr) {
+//   let countrySorted = arr.forEach((el) => {
+//
 // }
+
 //
 // /**
 //  * Creates an identity matrix of the specified size
@@ -508,8 +510,8 @@ function toStringList(arr) {
 //  *           [0,0,0,1,0],
 //  *           [0,0,0,0,1]]
 //  */
-// function getIdentityMatrix(/* n */) {
-//   throw new Error('Not implemented');
+// function getIdentityMatrix(n) {
+//
 // }
 //
 // /**
@@ -525,9 +527,15 @@ function toStringList(arr) {
 //  *     0, 100 => [ 0, 1, 2, ..., 100 ]
 //  *     3, 3   => [ 3 ]
 //  */
-// function getIntervalArray(/* start, end */) {
-//   throw new Error('Not implemented');
-// }
+function getIntervalArray(start, end) {
+  const res = [];
+  // eslint-disable-next-line no-plusplus
+  for (let i = start; i <= end; i++) {
+    res.push(i);
+  }
+  return res;
+}
+
 //
 // /**
 //  * Returns array containing only unique values from the specified array.
@@ -540,9 +548,17 @@ function toStringList(arr) {
 //  *   [ 'a', 'a', 'a', 'a' ]  => [ 'a' ]
 //  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
 //  */
-// function distinct(/* arr */) {
-//   throw new Error('Not implemented');
-// }
+function distinct(arr) {
+  const res = [];
+  arr.map((el) => {
+    if (!res.includes(el)) {
+      res.push(el);
+    }
+    return el;
+  });
+  return res;
+}
+
 //
 // /**
 //  * Groups elements of the specified array by key.
@@ -574,9 +590,10 @@ function toStringList(arr) {
 //  *    "Poland" => ["Lodz"]
 //  *   }
 //  */
-// function group(/* array, keySelector, valueSelector */) {
-//   throw new Error('Not implemented');
+// function group(array, keySelector, valueSelector) {
+//
 // }
+
 //
 //
 // /**
@@ -672,8 +689,8 @@ module.exports = {
   findAllOccurrences,
   //   sortCitiesArray,
   //   getIdentityMatrix,
-  //   getIntervalArray,
-  //   distinct,
+  getIntervalArray,
+  distinct,
   //   group,
   selectMany,
 //   getElementByIndexes,
