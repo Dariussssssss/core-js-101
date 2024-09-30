@@ -53,10 +53,10 @@ function getCircleCircumference(radius) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-// function getAverage(value1, value2) {
-//   // eslint-disable-next-line no-undef
-//   return BigInt((value1 + value2) / 2);
-// }
+function getAverage(value1, value2) {
+  // eslint-disable-next-line no-undef
+  return BigInt((BigInt(value1) + BigInt(value2)) / BigInt(2));
+}
 
 // /**
 //  * Returns a distance between two points by cartesian coordinates.
@@ -114,9 +114,15 @@ function getLinearEquationRoot(a, b) {
 //  *   (0,1) (0,1)     => 0
 //  *   (0,1) (1,2)     => 0
 //  */
-// function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-//   throw new Error('Not implemented');
-// }
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  const valueV = x1 * x2 + y1 * y2;
+  const value1 = Math.sqrt(x1 * x1 + y1 * y1);
+  const value2 = Math.sqrt(x2 * x2 + y2 * y2);
+  const cos = valueV / (value1 * value2);
+  const res = Math.max(-1, Math.min(1, cos));
+  return Math.acos(res);
+}
+
 //
 // /**
 //  * Returns a last digit of a integer number.
@@ -244,10 +250,10 @@ function toNumber(value, def) {
 module.exports = {
   getRectangleArea,
   getCircleCircumference,
-  // getAverage,
+  getAverage,
   getDistanceBetweenPoints,
   getLinearEquationRoot,
-  // getAngleBetweenVectors,
+  getAngleBetweenVectors,
   getLastDigit,
   parseNumberFromString,
   getParallelepipedDiagonal,

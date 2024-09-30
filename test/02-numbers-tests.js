@@ -14,14 +14,13 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getCircleCircumference(0), 0);
   });
 
-  // it.optional('getAverage should return an average of two numbers', () => {
-  //   assert.equal(tasks.getAverage(5, 5), 5);
-  //   assert.equal(tasks.getAverage(10, 0), 5);
-  //   assert.equal(tasks.getAverage(-3, 3), 0);
-  //   assert.equal(tasks.getAverage(Number.MAX_VALUE - 2, Number.MAX_VALUE), Number.MAX_VALUE - 1);
-  // eslint-disable-next-line max-len
-  //   assert.equal(tasks.getAverage(Number.MAX_VALUE, -Number.MAX_VALUE / 2), Number.MAX_VALUE / 4);
-  // });
+  it.optional('getAverage should return an average of two numbers', () => {
+    assert.equal(tasks.getAverage(5, 5), 5);
+    assert.equal(tasks.getAverage(10, 0), 5);
+    assert.equal(tasks.getAverage(-3, 3), 0);
+    assert.equal(tasks.getAverage(Number.MAX_VALUE - 2, Number.MAX_VALUE), Number.MAX_VALUE - 1);
+    assert.equal(tasks.getAverage(Number.MAX_VALUE, -Number.MAX_VALUE / 2), Number.MAX_VALUE / 4);
+  });
 
   it.optional('getDistanceBetweenPoints should return a distance between points', () => {
     assert.equal(tasks.getDistanceBetweenPoints(0, 0, 0, 1), 1);
@@ -35,12 +34,12 @@ describe('02-numbers-tasks', () => {
     assert.equal(tasks.getLinearEquationRoot(5, 0), 0);
   });
 
-  //   it.optional('getAngleBetweenVectors should return a angle (in radians) between two linear vectors', () => {
-  //     assert.equal(tasks.getAngleBetweenVectors(1, 0, 0, 1), Math.PI / 2);
-  //     assert.equal(tasks.getAngleBetweenVectors(0, 1, 0, -1), Math.PI);
-  //     assert.equal(tasks.getAngleBetweenVectors(0, -1, 1, 0), Math.PI / 2);
-  //     assert.equal(tasks.getAngleBetweenVectors(0, 1, 0, 1), 0);
-  //   });
+  it.optional('getAngleBetweenVectors should return a angle (in radians) between two linear vectors', () => {
+    assert.equal(tasks.getAngleBetweenVectors(1, 0, 0, 1), Math.PI / 2);
+    assert.equal(tasks.getAngleBetweenVectors(0, 1, 0, -1), Math.PI);
+    assert.equal(tasks.getAngleBetweenVectors(0, -1, 1, 0), Math.PI / 2);
+    assert.equal(tasks.getAngleBetweenVectors(0, 1, 0, 1), 0);
+  });
 
   it.optional('getLastDigit should return a last digit of the number', () => {
     assert.equal(tasks.getLastDigit(100), 0);
