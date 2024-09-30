@@ -70,31 +70,30 @@ it.optional('extractEmails should extract emails from string list delimeted by s
   );
 });
 
-// eslint-disable-next-line max-len
-// it.optional('getRectangleString should return the string reprentation of rectangle with specified size', () => {
-//   assert.equal(
-//     tasks.getRectangleString(6, 4),
-//     // eslint-disable-next-line indent
-//       '┌────┐\n'
-//     + '│    │\n'
-//     + '│    │\n'
-//     + '└────┘\n',
-//   );
-//   assert.deepEqual(
-//     tasks.getRectangleString(2, 2),
-//     // eslint-disable-next-line indent
-//       '┌┐\n'
-//     + '└┘\n',
-//   );
-//   assert.deepEqual(
-//     tasks.getRectangleString(12, 3),
-//     // eslint-disable-next-line indent
-//       '┌──────────┐\n'
-//     + '│          │\n'
-//     + '└──────────┘\n',
-//   );
-// });
-//
+it.optional('getRectangleString should return the string reprentation of rectangle with specified size', () => {
+  assert.equal(
+    tasks.getRectangleString(6, 4),
+    // eslint-disable-next-line indent
+    '┌────┐\n'
+    + '│    │\n'
+    + '│    │\n'
+    + '└────┘\n',
+  );
+  assert.deepEqual(
+    tasks.getRectangleString(2, 2),
+    // eslint-disable-next-line indent
+    '┌┐\n'
+    + '└┘\n',
+  );
+  assert.deepEqual(
+    tasks.getRectangleString(12, 3),
+    // eslint-disable-next-line indent
+    '┌──────────┐\n'
+    + '│          │\n'
+    + '└──────────┘\n',
+  );
+});
+
 it.optional('encodeToRot13 should encode-decode string using ROT13 algorithm', () => {
   assert.equal(tasks.encodeToRot13('hello'), 'uryyb');
   assert.equal(tasks.encodeToRot13('Why did the chicken cross the road?'), 'Jul qvq gur puvpxra pebff gur ebnq?');

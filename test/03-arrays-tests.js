@@ -795,60 +795,60 @@ describe('03-arrays-tasks', () => {
     });
   });
 
-//
-//   it.optional('getElementByIndexes should return an element from array by specified indexes', () => {
-//     [
-//       {
-//         arr: [[1, 2], [3, 4], [5, 6]],
-//         indexes: [0, 0],
-//         expected: 1,
-//       }, {
-//         arr: ['one', 'two', 'three'],
-//         indexes: [2],
-//         expected: 'three',
-//       }, {
-//         arr: [[[1, 2, 3]]],
-//         indexes: [0, 0, 1],
-//         expected: 2,
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getElementByIndexes(data.arr, data.indexes);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `getElementByIndexes(${JSON.stringify(data.arr)}, ${JSON.stringify(data.indexes)}) returns an incorrect result. Expected ${data.expected}, but actual ${actual}`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('swapHeadAndTail should swap the head and tail of the array', () => {
-//     [
-//       {
-//         arr: [1],
-//         expected: [1],
-//       }, {
-//         arr: [1, 2],
-//         expected: [2, 1],
-//       }, {
-//         arr: [1, 2, 3],
-//         expected: [3, 2, 1],
-//       }, {
-//         arr: [1, 2, 3, 4],
-//         expected: [3, 4, 1, 2],
-//       }, {
-//         arr: [1, 2, 3, 4, 5],
-//         expected: [4, 5, 3, 1, 2],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.swapHeadAndTail(Array.from(data.arr));
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//         `The result of swapping head and tail [${data.arr}] is not correct`,
-//       );
-//     });
-//   });
+  //
+  //   it.optional('getElementByIndexes should return an element from array by specified indexes', () => {
+  //     [
+  //       {
+  //         arr: [[1, 2], [3, 4], [5, 6]],
+  //         indexes: [0, 0],
+  //         expected: 1,
+  //       }, {
+  //         arr: ['one', 'two', 'three'],
+  //         indexes: [2],
+  //         expected: 'three',
+  //       }, {
+  //         arr: [[[1, 2, 3]]],
+  //         indexes: [0, 0, 1],
+  //         expected: 2,
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks.getElementByIndexes(data.arr, data.indexes);
+  //       assert.equal(
+  //         actual,
+  //         data.expected,
+  //         `getElementByIndexes(${JSON.stringify(data.arr)}, ${JSON.stringify(data.indexes)}) returns an incorrect result. Expected ${data.expected}, but actual ${actual}`,
+  //       );
+  //     });
+  //   });
+  //
+  //
+  // it.optional('swapHeadAndTail should swap the head and tail of the array', () => {
+  //   [
+  //     {
+  //       arr: [1],
+  //       expected: [1],
+  //     }, {
+  //       arr: [1, 2],
+  //       expected: [2, 1],
+  //     }, {
+  //       arr: [1, 2, 3],
+  //       expected: [3, 2, 1],
+  //     }, {
+  //       arr: [1, 2, 3, 4],
+  //       expected: [3, 4, 1, 2],
+  //     }, {
+  //       arr: [1, 2, 3, 4, 5],
+  //       expected: [4, 5, 3, 1, 2],
+  //     },
+  //   ].forEach((data) => {
+  //     const actual = tasks.swapHeadAndTail(Array.from(data.arr));
+  //     assert.deepEqual(
+  //       actual,
+  //       data.expected,
+  //       `The result of swapping head and tail [${data.arr}] is not correct`,
+  //     );
+  //   });
+  // });
 //
 //
 //   it.optional('Functions from 03-array-test.js should not use basic loops statements', () => {

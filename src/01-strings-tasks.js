@@ -227,19 +227,18 @@ function extractEmails(str) {
 //  *             '└──────────┘\n'
 //  *
 //  */
-// function getRectangleString(width, height) {
-//   const a = '┌┐\n';
-//   const b = '││\n';
-//   const c = '└┘\n';
-//   const d = '┘\n';
-//   const w = '─';
-//   let h = '│';
-//   let res = a + b + c + d;
-//   if (width > 1 && height > 1) {
-//     res = a + w.repeat(width) + b + c + w.repeat(width) + d;
-//   }
-//   return res;
-// }
+function getRectangleString(width, height) {
+  let res = '';
+  const stringWTop = `┌${'─'.repeat(width - 2)}┐\n`;
+  const stringH = `│${' '.repeat(width - 2)}│\n`;
+  const stringWBottom = `└${'─'.repeat(width - 2)}┘\n`;
+  if (height > 2) {
+    // eslint-disable-next-line no-return-assign
+    return res = stringWTop + stringH.repeat(height - 2) + stringWBottom;
+  }
+  res = stringWTop + stringWBottom;
+  return res;
+}
 
 //
 //
@@ -346,7 +345,7 @@ module.exports = {
   unbracketTag,
   convertToUpperCase,
   extractEmails,
-  // getRectangleString,
+  getRectangleString,
   encodeToRot13,
   isString,
   getCardId,

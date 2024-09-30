@@ -635,9 +635,10 @@ function selectMany(arr, childrenSelector) {
 //  *   ['one','two','three'], [2]       => 'three'  (arr[2])
 //  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
 //  */
-// function getElementByIndexes(/* arr, indexes */) {
-//   throw new Error('Not implemented');
+// function getElementByIndexes(arr, indexes) {
+//
 // }
+
 //
 //
 // /**
@@ -658,11 +659,10 @@ function selectMany(arr, childrenSelector) {
 //  *   [ 1, 2, 3, 4, 5, 6, 7, 8 ]   =>  [ 5, 6, 7, 8, 1, 2, 3, 4 ]
 //  *
 //  */
-// function swapHeadAndTail(/* arr */) {
-//   throw new Error('Not implemented');
+// function swapHeadAndTail(arr) {
+//
 // }
-//
-//
+
 module.exports = {
   findElement,
   generateOdds,
@@ -693,6 +693,6 @@ module.exports = {
   distinct,
   //   group,
   selectMany,
-//   getElementByIndexes,
-//   swapHeadAndTail,
+  //   getElementByIndexes,
+  //   swapHeadAndTail,
 };

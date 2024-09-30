@@ -19,6 +19,7 @@ describe('02-numbers-tasks', () => {
   //   assert.equal(tasks.getAverage(10, 0), 5);
   //   assert.equal(tasks.getAverage(-3, 3), 0);
   //   assert.equal(tasks.getAverage(Number.MAX_VALUE - 2, Number.MAX_VALUE), Number.MAX_VALUE - 1);
+  // eslint-disable-next-line max-len
   //   assert.equal(tasks.getAverage(Number.MAX_VALUE, -Number.MAX_VALUE / 2), Number.MAX_VALUE / 4);
   // });
 
