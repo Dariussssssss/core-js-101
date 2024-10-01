@@ -151,9 +151,22 @@ function isTriangle(a, b, c) {
 //  *   { top:20, left:20, width: 20, height: 20 }    =>  false
 //  *
 //  */
-// function doRectanglesOverlap(/* rect1, rect2 */) {
-//   throw new Error('Not implemented');
-// }
+function doRectanglesOverlap(rect1, rect2) {
+  const rect1R = rect1.left + rect1.width;
+  const rect1B = rect1.top + rect1.height;
+  const rect2R = rect2.left + rect2.width;
+  const rect2B = rect2.top + rect2.height;
+
+  const res = (
+    rect1.left >= rect2R
+    || rect1R <= rect2.left
+    || rect1.top >= rect2B
+    || rect1B <= rect2.top
+  );
+
+  return !res;
+}
+
 //
 //
 // /**
@@ -484,7 +497,7 @@ module.exports = {
   getFactorial,
   getSumBetweenNumbers,
   isTriangle,
-  //   doRectanglesOverlap,
+  doRectanglesOverlap,
   //   isInsideCircle,
   findFirstSingleChar,
   //   getIntervalString,

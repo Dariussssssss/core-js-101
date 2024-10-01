@@ -109,117 +109,117 @@ describe('04-conditions-n-loops-tasks', () => {
     });
   });
 
-//
-//   it.optional('doRectanglesOverlap should return true if rectangles overlap', () => {
-//     [
-//       {
-//         rect1: {
-//           top: 0, left: 0, width: 10, height: 10,
-//         },
-//         rect2: {
-//           top: 5, left: 5, width: 10, height: 10,
-//         },
-//         expected: true,
-//       }, {
-//         rect1: {
-//           top: 10, left: 10, width: 10, height: 10,
-//         },
-//         rect2: {
-//           top: 5, left: 5, width: 15, height: 15,
-//         },
-//         expected: true,
-//       }, {
-//         rect1: {
-//           top: 10, left: 10, width: 50, height: 5,
-//         },
-//         rect2: {
-//           top: 5, left: 5, width: 10, height: 50,
-//         },
-//         expected: true,
-//       }, {
-//         rect1: {
-//           top: 0, left: 0, width: 90, height: 90,
-//         },
-//         rect2: {
-//           top: 25, left: 25, width: 10, height: 10,
-//         },
-//         expected: true,
-//       }, {
-//         rect1: {
-//           top: 5, left: 5, width: 20, height: 20,
-//         },
-//         rect2: {
-//           top: 5, left: 5, width: 40, height: 10,
-//         },
-//         expected: true,
-//       }, {
-//         rect1: {
-//           top: 5, left: 5, width: 20, height: 20,
-//         },
-//         rect2: {
-//           top: 30, left: 5, width: 40, height: 10,
-//         },
-//         expected: false,
-//       }, {
-//         rect1: {
-//           top: 0, left: 0, width: 90, height: 90,
-//         },
-//         rect2: {
-//           top: 25, left: 100, width: 10, height: 10,
-//         },
-//         expected: false,
-//       },
-//     ].forEach((data) => {
-//       assert.equal(
-//         tasks.doRectanglesOverlap(data.rect1, data.rect2),
-//         data.expected,
-//         `doRectanglesOverlap(\n   ${JSON.stringify(data.rect1)},\n   ${JSON.stringify(data.rect2)}\n): expected ${data.expected}`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('isInsideCircle should return true if point lies inside of the specified circle', () => {
-//     [
-//       {
-//         circle: { center: { x: 0, y: 0 }, radius: 10 },
-//         point: { x: 0, y: 0 },
-//         expected: true,
-//       }, {
-//         circle: { center: { x: 5, y: 5 }, radius: 6 },
-//         point: { x: 5, y: 10.99 },
-//         expected: true,
-//       }, {
-//         circle: { center: { x: 0, y: 0 }, radius: 10 },
-//         point: { x: 0, y: 10 },
-//         expected: false,
-//       }, {
-//         circle: { center: { x: 5, y: 5 }, radius: 6 },
-//         point: { x: 0, y: 0 },
-//         expected: false,
-//       }, {
-//         circle: { center: { x: 2, y: 2 }, radius: 1 },
-//         point: { x: 2.8, y: 2.8 },
-//         expected: false,
-//       }, {
-//         circle: { center: { x: 2, y: 2 }, radius: 4 },
-//         point: { x: -1, y: -1 },
-//         expected: false,
-//       }, {
-//         circle: { center: { x: 2, y: 2 }, radius: 4 },
-//         point: { x: 2, y: 6.1 },
-//         expected: false,
-//       },
-//     ].forEach((data) => {
-//       assert.equal(
-//         tasks.isInsideCircle(data.circle, data.point),
-//         data.expected,
-//         `isInsideCircle(\n   ${JSON.stringify(data.circle)},\n   ${JSON.stringify(data.point)}\n): expected ${data.expected}`,
-//       );
-//     });
-//   });
-//
-//
+
+  it.optional('doRectanglesOverlap should return true if rectangles overlap', () => {
+    [
+      {
+        rect1: {
+          top: 0, left: 0, width: 10, height: 10,
+        },
+        rect2: {
+          top: 5, left: 5, width: 10, height: 10,
+        },
+        expected: true,
+      }, {
+        rect1: {
+          top: 10, left: 10, width: 10, height: 10,
+        },
+        rect2: {
+          top: 5, left: 5, width: 15, height: 15,
+        },
+        expected: true,
+      }, {
+        rect1: {
+          top: 10, left: 10, width: 50, height: 5,
+        },
+        rect2: {
+          top: 5, left: 5, width: 10, height: 50,
+        },
+        expected: true,
+      }, {
+        rect1: {
+          top: 0, left: 0, width: 90, height: 90,
+        },
+        rect2: {
+          top: 25, left: 25, width: 10, height: 10,
+        },
+        expected: true,
+      }, {
+        rect1: {
+          top: 5, left: 5, width: 20, height: 20,
+        },
+        rect2: {
+          top: 5, left: 5, width: 40, height: 10,
+        },
+        expected: true,
+      }, {
+        rect1: {
+          top: 5, left: 5, width: 20, height: 20,
+        },
+        rect2: {
+          top: 30, left: 5, width: 40, height: 10,
+        },
+        expected: false,
+      }, {
+        rect1: {
+          top: 0, left: 0, width: 90, height: 90,
+        },
+        rect2: {
+          top: 25, left: 100, width: 10, height: 10,
+        },
+        expected: false,
+      },
+    ].forEach((data) => {
+      assert.equal(
+        tasks.doRectanglesOverlap(data.rect1, data.rect2),
+        data.expected,
+        `doRectanglesOverlap(\n   ${JSON.stringify(data.rect1)},\n   ${JSON.stringify(data.rect2)}\n): expected ${data.expected}`,
+      );
+    });
+  });
+
+  //
+  //   it.optional('isInsideCircle should return true if point lies inside of the specified circle', () => {
+  //     [
+  //       {
+  //         circle: { center: { x: 0, y: 0 }, radius: 10 },
+  //         point: { x: 0, y: 0 },
+  //         expected: true,
+  //       }, {
+  //         circle: { center: { x: 5, y: 5 }, radius: 6 },
+  //         point: { x: 5, y: 10.99 },
+  //         expected: true,
+  //       }, {
+  //         circle: { center: { x: 0, y: 0 }, radius: 10 },
+  //         point: { x: 0, y: 10 },
+  //         expected: false,
+  //       }, {
+  //         circle: { center: { x: 5, y: 5 }, radius: 6 },
+  //         point: { x: 0, y: 0 },
+  //         expected: false,
+  //       }, {
+  //         circle: { center: { x: 2, y: 2 }, radius: 1 },
+  //         point: { x: 2.8, y: 2.8 },
+  //         expected: false,
+  //       }, {
+  //         circle: { center: { x: 2, y: 2 }, radius: 4 },
+  //         point: { x: -1, y: -1 },
+  //         expected: false,
+  //       }, {
+  //         circle: { center: { x: 2, y: 2 }, radius: 4 },
+  //         point: { x: 2, y: 6.1 },
+  //         expected: false,
+  //       },
+  //     ].forEach((data) => {
+  //       assert.equal(
+  //         tasks.isInsideCircle(data.circle, data.point),
+  //         data.expected,
+  //         `isInsideCircle(\n   ${JSON.stringify(data.circle)},\n   ${JSON.stringify(data.point)}\n): expected ${data.expected}`,
+  //       );
+  //     });
+  //   });
+  //
+  //
   it.optional('findFirstSingleChar should return the first unrepeated char from string', () => {
     [
       { str: 'The quick brown fox jumps over the lazy dog', expected: 'T' },
@@ -235,52 +235,53 @@ describe('04-conditions-n-loops-tasks', () => {
     });
   });
 
-//
-//   it.optional('getIntervalString should return the string representation of math interval', () => {
-//     [
-//       {
-//         a: 0,
-//         b: 1,
-//         isStartIncluded: true,
-//         isEndIncluded: true,
-//         expected: '[0, 1]',
-//       }, {
-//         a: 0,
-//         b: 1,
-//         isStartIncluded: true,
-//         isEndIncluded: false,
-//         expected: '[0, 1)',
-//       }, {
-//         a: 0,
-//         b: 1,
-//         isStartIncluded: false,
-//         isEndIncluded: true,
-//         expected: '(0, 1]',
-//       }, {
-//         a: 0,
-//         b: 1,
-//         isStartIncluded: false,
-//         isEndIncluded: false,
-//         expected: '(0, 1)',
-//       }, {
-//         a: 5,
-//         b: 3,
-//         isStartIncluded: true,
-//         isEndIncluded: true,
-//         expected: '[3, 5]',
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks
-//         .getIntervalString(data.a, data.b, data.isStartIncluded, data.isEndIncluded);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `getIntervalString(${data.a}, ${data.b}, ${data.isStartIncluded}, ${data.isEndIncluded}) shoud return '${data.expected}', but actually '${actual}'`,
-//       );
-//     });
-//   });
-//
-//
+  //
+  // eslint-disable-next-line max-len
+  //   it.optional('getIntervalString should return the string representation of math interval', () => {
+  //     [
+  //       {
+  //         a: 0,
+  //         b: 1,
+  //         isStartIncluded: true,
+  //         isEndIncluded: true,
+  //         expected: '[0, 1]',
+  //       }, {
+  //         a: 0,
+  //         b: 1,
+  //         isStartIncluded: true,
+  //         isEndIncluded: false,
+  //         expected: '[0, 1)',
+  //       }, {
+  //         a: 0,
+  //         b: 1,
+  //         isStartIncluded: false,
+  //         isEndIncluded: true,
+  //         expected: '(0, 1]',
+  //       }, {
+  //         a: 0,
+  //         b: 1,
+  //         isStartIncluded: false,
+  //         isEndIncluded: false,
+  //         expected: '(0, 1)',
+  //       }, {
+  //         a: 5,
+  //         b: 3,
+  //         isStartIncluded: true,
+  //         isEndIncluded: true,
+  //         expected: '[3, 5]',
+  //       },
+  //     ].forEach((data) => {
+  //       const actual = tasks
+  //         .getIntervalString(data.a, data.b, data.isStartIncluded, data.isEndIncluded);
+  //       assert.equal(
+  //         actual,
+  //         data.expected,
+  //         `getIntervalString(${data.a}, ${data.b}, ${data.isStartIncluded}, ${data.isEndIncluded}) shoud return '${data.expected}', but actually '${actual}'`,
+  //       );
+  //     });
+  //   });
+  //
+  //
   it.optional('reverseString should return the specified string in reverse order', () => {
     [
       { str: 'The quick brown fox jumps over the lazy dog', expected: 'god yzal eht revo spmuj xof nworb kciuq ehT' },
@@ -314,53 +315,53 @@ describe('04-conditions-n-loops-tasks', () => {
     });
   });
 
-//
-//   it.optional('isCreditCardNumber should validate CCN', () => {
-//     [
-//       79927398713,
-//       4012888888881881,
-//       5123456789012346,
-//       378282246310005,
-//       371449635398431,
-//       378734493671000,
-//       5610591081018250,
-//       30569309025904,
-//       38520000023237,
-//       6011111111111117,
-//       6011000990139424,
-//       3530111333300000,
-//       3566002020360505,
-//       5555555555554444,
-//       5105105105105100,
-//       4111111111111111,
-//       4012888888881881,
-//       4222222222222,
-//       5019717010103742,
-//       6331101999990016,
-//       54891243456789010,
-//     ].forEach((ccn) => {
-//       assert(
-//         tasks.isCreditCardNumber(ccn),
-//         `CCN ${ccn} is valid, but actually not`,
-//       );
-//     });
-//
-//
-//     [
-//       4571234567890111,
-//       5436468789016589,
-//       4916123456789012,
-//       371449635398430,
-//       9112893456789010,
-//     ].forEach((ccn) => {
-//       assert(
-//         tasks.isCreditCardNumber(ccn) === false,
-//         `CCN ${ccn} is not valid, but actually yes`,
-//       );
-//     });
-//   });
-//
-//
+  //
+  //   it.optional('isCreditCardNumber should validate CCN', () => {
+  //     [
+  //       79927398713,
+  //       4012888888881881,
+  //       5123456789012346,
+  //       378282246310005,
+  //       371449635398431,
+  //       378734493671000,
+  //       5610591081018250,
+  //       30569309025904,
+  //       38520000023237,
+  //       6011111111111117,
+  //       6011000990139424,
+  //       3530111333300000,
+  //       3566002020360505,
+  //       5555555555554444,
+  //       5105105105105100,
+  //       4111111111111111,
+  //       4012888888881881,
+  //       4222222222222,
+  //       5019717010103742,
+  //       6331101999990016,
+  //       54891243456789010,
+  //     ].forEach((ccn) => {
+  //       assert(
+  //         tasks.isCreditCardNumber(ccn),
+  //         `CCN ${ccn} is valid, but actually not`,
+  //       );
+  //     });
+  //
+  //
+  //     [
+  //       4571234567890111,
+  //       5436468789016589,
+  //       4916123456789012,
+  //       371449635398430,
+  //       9112893456789010,
+  //     ].forEach((ccn) => {
+  //       assert(
+  //         tasks.isCreditCardNumber(ccn) === false,
+  //         `CCN ${ccn} is not valid, but actually yes`,
+  //       );
+  //     });
+  //   });
+  //
+  //
   it.optional('getDigitalRoot should return the cyclic sum of all digits', () => {
     [
       { num: 12345, expected: 6 },
