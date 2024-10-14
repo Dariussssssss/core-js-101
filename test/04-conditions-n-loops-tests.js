@@ -583,225 +583,265 @@ describe('04-conditions-n-loops-tasks', () => {
     });
   });
 
-//
-//   it.optional('toNaryString should return the n-ary string representation of number', () => {
-//     [
-//       { num: 1024, n: 2, expected: '10000000000' },
-//       { num: 6561, n: 3, expected: '100000000' },
-//       { num: 365, n: 2, expected: '101101101' },
-//       { num: 365, n: 3, expected: '111112' },
-//       { num: 365, n: 4, expected: '11231' },
-//       { num: 365, n: 5, expected: '2430' },
-//       { num: 365, n: 6, expected: '1405' },
-//       { num: 365, n: 7, expected: '1031' },
-//       { num: 365, n: 9, expected: '445' },
-//       { num: 365, n: 10, expected: '365' },
-//     ].forEach((data) => {
-//       const actual = tasks.toNaryString(data.num, data.n);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `${data.num} with radix ${data.n} = ${data.expected}, but actual ${actual}`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getCommonDirectoryPath should return a common path in the file system', () => {
-//     [
-//       {
-//         pathes: ['/web/images/image1.png', '/web/images/image2.png'],
-//         expected: '/web/images/',
-//       }, {
-//         pathes: ['/web/assets/style.css', '/web/scripts/app.js', 'home/setting.conf'],
-//         expected: '',
-//       }, {
-//         pathes: ['/web/assets/style.css', '/.bin/mocha', '/read.me'],
-//         expected: '/',
-//       }, {
-//         pathes: ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'],
-//         expected: '/',
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getCommonDirectoryPath(data.pathes, data.n);
-//       assert.equal(
-//         actual,
-//         data.expected,
-//         `Common directory path fo [${data.pathes}] = ${data.expected}, but actual ${actual}`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('getMatrixProduct should return the product of two specified matrices', () => {
-//     [
-//       {
-//         m1: [
-//           [1, 0, 0],
-//           [0, 1, 0],
-//           [0, 0, 1],
-//         ],
-//         m2: [
-//           [1, 2, 3],
-//           [4, 5, 6],
-//           [7, 8, 9],
-//         ],
-//         expected: [
-//           [1, 2, 3],
-//           [4, 5, 6],
-//           [7, 8, 9],
-//         ],
-//       }, {
-//         m1: [
-//           [1, 2, 3],
-//         ],
-//         m2: [
-//           [4],
-//           [5],
-//           [6],
-//         ],
-//         expected: [[32]],
-//       },
-//     ].forEach((data) => {
-//       const actual = tasks.getMatrixProduct(data.m1, data.m2);
-//       assert.deepEqual(
-//         actual,
-//         data.expected,
-//         `Product of [${data.m1}] x [${data.m2}] = [${data.expected}], but actual ${actual}`,
-//       );
-//     });
-//   });
-//
-//
-//   it.optional('evaluateTicTacToePosition should return the winner if defined', () => {
-//     const X = 'X';
-//     const O = '0';
-//
-//     function positionToSting(position) {
-//       let result = '';
-//       for (let i = 0; i < 3; i += 1) {
-//         result += '-------------\n| ';
-//         for (let j = 0; j < 3; j += 1) {
-//           result += `${(position[i][j] ? position[i][j] : ' ')} | `;
-//         }
-//         result += '\n';
-//       }
-//       result += '-------------';
-//       return result;
-//     }
-//
-//     [[
-//       [X, X, X],
-//       [O, O],
-//       [O, undefined, undefined],
-//     ], [
-//       [undefined, O, O],
-//       [X, X, X],
-//       [O, undefined, O],
-//     ], [
-//       [undefined, undefined, O],
-//       [O, undefined, O],
-//       [X, X, X],
-//     ], [
-//       [X, undefined, O],
-//       [X, undefined, O],
-//       [X, O],
-//     ], [
-//       [O, X, O],
-//       [X, X, O],
-//       [O, X],
-//     ], [
-//       [O, O, X],
-//       [X, O, X],
-//       [O, X, X],
-//     ], [
-//       [X, O, O],
-//       [X, X, O],
-//       [O, X, X],
-//     ], [
-//       [O, O, X],
-//       [X, X, O],
-//       [X, undefined, O],
-//     ],
-//     ].forEach((data) => {
-//       const actual = tasks.evaluateTicTacToePosition(data);
-//       assert.equal(
-//         actual,
-//         X,
-//         `Position: \n${positionToSting(data)}\n  The winner is X, but actually '${actual}'`,
-//       );
-//     });
-//
-//     [[
-//       [O, O, O],
-//       [undefined, X, X],
-//       [X, undefined, undefined],
-//     ], [
-//       [X, X],
-//       [O, O, O],
-//       [X, undefined, X],
-//     ], [
-//       [undefined, undefined, undefined],
-//       [X, undefined, X],
-//       [O, O, O],
-//     ], [
-//       [O, undefined, X],
-//       [O, X, X],
-//       [O, X],
-//     ], [
-//       [X, O, X],
-//       [X, O, O],
-//       [O, O, X],
-//     ], [
-//       [X, X, O],
-//       [X, O, O],
-//       [undefined, X, O],
-//     ], [
-//       [O, X, X],
-//       [X, O, X],
-//       [O, X, O],
-//     ], [
-//       [X, X, O],
-//       [X, O, X],
-//       [O, undefined, X],
-//     ],
-//     ].forEach((data) => {
-//       const actual = tasks.evaluateTicTacToePosition(data);
-//       assert.equal(
-//         actual,
-//         O,
-//         `Position: \n${positionToSting(data)}\n  The winner is O, but actually '${actual}'`,
-//       );
-//     });
-//
-//     [[
-//       [undefined, undefined, undefined],
-//       [undefined, undefined, undefined],
-//       [undefined, undefined, undefined],
-//     ], [
-//       [X, undefined, undefined],
-//       [O, O],
-//       [undefined, undefined, X],
-//     ], [
-//       [X, O, X],
-//       [X, O, X],
-//       [O, X, O],
-//     ], [
-//       [X, O, X],
-//       [O, X, X],
-//       [O, X, O],
-//     ], [
-//       [X, O, X],
-//       [O, undefined, O],
-//       [X, O, X],
-//     ],
-//     ].forEach((data) => {
-//       const actual = tasks.evaluateTicTacToePosition(data);
-//       assert.equal(
-//         actual,
-//         undefined,
-//         `Position: \n${positionToSting(data)}\n  The winner is undefined, but actually '${actual}'`,
-//       );
-//     });
-//   });
+
+  it.optional('toNaryString should return the n-ary string representation of number', () => {
+    [
+      {
+        num: 1024,
+        n: 2,
+        expected: '10000000000',
+      },
+      {
+        num: 6561,
+        n: 3,
+        expected: '100000000',
+      },
+      {
+        num: 365,
+        n: 2,
+        expected: '101101101',
+      },
+      {
+        num: 365,
+        n: 3,
+        expected: '111112',
+      },
+      {
+        num: 365,
+        n: 4,
+        expected: '11231',
+      },
+      {
+        num: 365,
+        n: 5,
+        expected: '2430',
+      },
+      {
+        num: 365,
+        n: 6,
+        expected: '1405',
+      },
+      {
+        num: 365,
+        n: 7,
+        expected: '1031',
+      },
+      {
+        num: 365,
+        n: 9,
+        expected: '445',
+      },
+      {
+        num: 365,
+        n: 10,
+        expected: '365',
+      },
+    ].forEach((data) => {
+      const actual = tasks.toNaryString(data.num, data.n);
+      assert.equal(
+        actual,
+        data.expected,
+        `${data.num} with radix ${data.n} = ${data.expected}, but actual ${actual}`,
+      );
+    });
+  });
+
+
+  it.optional('getCommonDirectoryPath should return a common path in the file system', () => {
+    [
+      {
+        pathes: ['/web/images/image1.png', '/web/images/image2.png'],
+        expected: '/web/images/',
+      }, {
+        pathes: ['/web/assets/style.css', '/web/scripts/app.js', 'home/setting.conf'],
+        expected: '',
+      }, {
+        pathes: ['/web/assets/style.css', '/.bin/mocha', '/read.me'],
+        expected: '/',
+      }, {
+        pathes: ['/web/favicon.ico', '/web-scripts/dump', '/webalizer/logs'],
+        expected: '/',
+      },
+    ].forEach((data) => {
+      const actual = tasks.getCommonDirectoryPath(data.pathes, data.n);
+      assert.equal(
+        actual,
+        data.expected,
+        `Common directory path fo [${data.pathes}] = ${data.expected}, but actual ${actual}`,
+      );
+    });
+  });
+
+
+  it.optional('getMatrixProduct should return the product of two specified matrices', () => {
+    [
+      {
+        m1: [
+          [1, 0, 0],
+          [0, 1, 0],
+          [0, 0, 1],
+        ],
+        m2: [
+          [1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9],
+        ],
+        expected: [
+          [1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9],
+        ],
+      }, {
+        m1: [
+          [1, 2, 3],
+        ],
+        m2: [
+          [4],
+          [5],
+          [6],
+        ],
+        expected: [[32]],
+      },
+    ].forEach((data) => {
+      const actual = tasks.getMatrixProduct(data.m1, data.m2);
+      assert.deepEqual(
+        actual,
+        data.expected,
+        `Product of [${data.m1}] x [${data.m2}] = [${data.expected}], but actual ${actual}`,
+      );
+    });
+  });
+
+
+  it.optional('evaluateTicTacToePosition should return the winner if defined', () => {
+    const X = 'X';
+    const O = '0';
+
+    function positionToSting(position) {
+      let result = '';
+      for (let i = 0; i < 3; i += 1) {
+        result += '-------------\n| ';
+        for (let j = 0; j < 3; j += 1) {
+          result += `${(position[i][j] ? position[i][j] : ' ')} | `;
+        }
+        result += '\n';
+      }
+      result += '-------------';
+      return result;
+    }
+
+    [[
+      [X, X, X],
+      [O, O],
+      [O, undefined, undefined],
+    ], [
+      [undefined, O, O],
+      [X, X, X],
+      [O, undefined, O],
+    ], [
+      [undefined, undefined, O],
+      [O, undefined, O],
+      [X, X, X],
+    ], [
+      [X, undefined, O],
+      [X, undefined, O],
+      [X, O],
+    ], [
+      [O, X, O],
+      [X, X, O],
+      [O, X],
+    ], [
+      [O, O, X],
+      [X, O, X],
+      [O, X, X],
+    ], [
+      [X, O, O],
+      [X, X, O],
+      [O, X, X],
+    ], [
+      [O, O, X],
+      [X, X, O],
+      [X, undefined, O],
+    ],
+    ].forEach((data) => {
+      const actual = tasks.evaluateTicTacToePosition(data);
+      assert.equal(
+        actual,
+        X,
+        `Position: \n${positionToSting(data)}\n  The winner is X, but actually '${actual}'`,
+      );
+    });
+
+    [[
+      [O, O, O],
+      [undefined, X, X],
+      [X, undefined, undefined],
+    ], [
+      [X, X],
+      [O, O, O],
+      [X, undefined, X],
+    ], [
+      [undefined, undefined, undefined],
+      [X, undefined, X],
+      [O, O, O],
+    ], [
+      [O, undefined, X],
+      [O, X, X],
+      [O, X],
+    ], [
+      [X, O, X],
+      [X, O, O],
+      [O, O, X],
+    ], [
+      [X, X, O],
+      [X, O, O],
+      [undefined, X, O],
+    ], [
+      [O, X, X],
+      [X, O, X],
+      [O, X, O],
+    ], [
+      [X, X, O],
+      [X, O, X],
+      [O, undefined, X],
+    ],
+    ].forEach((data) => {
+      const actual = tasks.evaluateTicTacToePosition(data);
+      assert.equal(
+        actual,
+        O,
+        `Position: \n${positionToSting(data)}\n  The winner is O, but actually '${actual}'`,
+      );
+    });
+
+    [[
+      [undefined, undefined, undefined],
+      [undefined, undefined, undefined],
+      [undefined, undefined, undefined],
+    ], [
+      [X, undefined, undefined],
+      [O, O],
+      [undefined, undefined, X],
+    ], [
+      [X, O, X],
+      [X, O, X],
+      [O, X, O],
+    ], [
+      [X, O, X],
+      [O, X, X],
+      [O, X, O],
+    ], [
+      [X, O, X],
+      [O, undefined, O],
+      [X, O, X],
+    ],
+    ].forEach((data) => {
+      const actual = tasks.evaluateTicTacToePosition(data);
+      assert.equal(
+        actual,
+        undefined,
+        `Position: \n${positionToSting(data)}\n  The winner is undefined, but actually '${actual}'`,
+      );
+    });
+  });
 });

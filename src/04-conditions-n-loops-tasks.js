@@ -126,12 +126,8 @@ function doRectanglesOverlap(rect1, rect2) {
   const rect2R = rect2.left + rect2.width;
   const rect2B = rect2.top + rect2.height;
 
-  const res = (
-    rect1.left >= rect2R
-    || rect1R <= rect2.left
-    || rect1.top >= rect2B
-    || rect1B <= rect2.top
-  );
+  // eslint-disable-next-line max-len
+  const res = (rect1.left >= rect2R || rect1R <= rect2.left || rect1.top >= rect2B || rect1B <= rect2.top);
 
   return !res;
 }
@@ -391,108 +387,153 @@ function isBracketsBalanced(str) {
   return storage.length === 0;
 }
 
-//
-//
-// /**
-//  * Returns the string with n-ary (binary, ternary, etc, where n <= 10)
-//  * representation of specified number.
-//  * See more about
-//  * https://en.wikipedia.org/wiki/Binary_number
-//  * https://en.wikipedia.org/wiki/Ternary_numeral_system
-//  * https://en.wikipedia.org/wiki/Radix
-//  *
-//  * @param {number} num
-//  * @param {number} n, radix of the result
-//  * @return {string}
-//  *
-//  * @example:
-//  *   1024, 2  => '10000000000'
-//  *   6561, 3  => '100000000'
-//  *    365, 2  => '101101101'
-//  *    365, 3  => '111112'
-//  *    365, 4  => '11231'
-//  *    365, 10 => '365'
-//  */
-// function toNaryString(/* num, n */) {
-//   throw new Error('Not implemented');
-// }
-//
-//
-// /**
-//  * Returns the common directory path for specified array of full filenames.
-//  *
-//  * @param {array} pathes
-//  * @return {string}
-//  *
-//  * @example:
-//  *   ['/web/images/image1.png', '/web/images/image2.png']  => '/web/images/'
-//  *   ['/web/assets/style.css', '/web/scripts/app.js',  'home/setting.conf'] => ''
-//  *   ['/web/assets/style.css', '/.bin/mocha',  '/read.me'] => '/'
-//  *   ['/web/favicon.ico', '/web-scripts/dump', '/verbalizer/logs'] => '/'
-//  */
+
+/**
+ * Returns the string with n-ary (binary, ternary, etc, where n <= 10)
+ * representation of specified number.
+ * See more about
+ * https://en.wikipedia.org/wiki/Binary_number
+ * https://en.wikipedia.org/wiki/Ternary_numeral_system
+ * https://en.wikipedia.org/wiki/Radix
+ *
+ * @param {number} num
+ * @param {number} n, radix of the result
+ * @return {string}
+ *
+ * @example:
+ *   1024, 2  => '10000000000'
+ *   6561, 3  => '100000000'
+ *    365, 2  => '101101101'
+ *    365, 3  => '111112'
+ *    365, 4  => '11231'
+ *    365, 10 => '365'
+ */
+function toNaryString(num, n) {
+  if (n >= 10) return num;
+  let res = '';
+  while (Math.trunc(num > 0)) {
+    const current = num % n;
+    res = current.toString() + res;
+    // eslint-disable-next-line no-param-reassign
+    num = Math.floor(num / n);
+  }
+  return res;
+}
+
+
+/**
+ * Returns the common directory path for specified array of full filenames.
+ *
+ * @param {array} pathes
+ * @return {string}
+ *
+ * @example:
+ *   ['/web/images/image1.png', '/web/images/image2.png']  => '/web/images/'
+ *   ['/web/assets/style.css', '/web/scripts/app.js',  'home/setting.conf'] => ''
+ *   ['/web/assets/style.css', '/.bin/mocha',  '/read.me'] => '/'
+ *   ['/web/favicon.ico', '/web-scripts/dump', '/verbalizer/logs'] => '/'
+ */
 // function getCommonDirectoryPath(pathes) {
+//   let res = '';
+//   // eslint-disable-next-line no-plusplus
+//   for (const path of pathes) {
+//
+//   }
 //
 // }
-// //
-//
-// /**
-//  * Returns the product of two specified matrixes.
-//  * See details: https://en.wikipedia.org/wiki/Matrix_multiplication
-//  *
-//  * @param {array} m1
-//  * @param {array} m2
-//  * @return {array}
-//  *
-//  * @example:
-//  *   [[ 1, 0, 0 ],       [[ 1, 2, 3 ],           [[ 1, 2, 3 ],
-//  *    [ 0, 1, 0 ],   X    [ 4, 5, 6 ],     =>     [ 4, 5, 6 ],
-//  *    [ 0, 0, 1 ]]        [ 7, 8, 9 ]]            [ 7, 8, 9 ]]
-//  *
-//  *                        [[ 4 ],
-//  *   [[ 1, 2, 3]]    X     [ 5 ],          =>     [[ 32 ]]
-//  *                         [ 6 ]]
-//  *
-//  */
-// function getMatrixProduct(/* m1, m2 */) {
-//   throw new Error('Not implemented');
-// }
-//
-//
-// /**
-//  * Returns the evaluation of the specified tic-tac-toe position.
-//  * See the details: https://en.wikipedia.org/wiki/Tic-tac-toe
-//  *
-//  * Position is provides as 3x3 array with the following values: 'X','0', undefined
-//  * Function should return who is winner in the current position according to the game rules.
-//  * The result can be: 'X','0',undefined
-//  *
-//  * @param {array} position
-//  * @return {string}
-//  *
-//  * @example
-//  *
-//  *   [[ 'X',   ,'0' ],
-//  *    [    ,'X','0' ],       =>  'X'
-//  *    [    ,   ,'X' ]]
-//  *
-//  *   [[ '0','0','0' ],
-//  *    [    ,'X',    ],       =>  '0'
-//  *    [ 'X',   ,'X' ]]
-//  *
-//  *   [[ '0','X','0' ],
-//  *    [    ,'X',    ],       =>  undefined
-//  *    [ 'X','0','X' ]]
-//  *
-//  *   [[    ,   ,    ],
-//  *    [    ,   ,    ],       =>  undefined
-//  *    [    ,   ,    ]]
-//  *
-//  */
-// function evaluateTicTacToePosition(/* position */) {
-//   throw new Error('Not implemented');
-// }
-//
-//
+
+
+/**
+ * Returns the product of two specified matrixes.
+ * See details: https://en.wikipedia.org/wiki/Matrix_multiplication
+ *
+ * @param {array} m1
+ * @param {array} m2
+ * @return {array}
+ *
+ * @example:
+ *   [[ 1, 0, 0 ],       [[ 1, 2, 3 ],           [[ 1, 2, 3 ],
+ *    [ 0, 1, 0 ],   X    [ 4, 5, 6 ],     =>     [ 4, 5, 6 ],
+ *    [ 0, 0, 1 ]]        [ 7, 8, 9 ]]            [ 7, 8, 9 ]]
+ *
+ *                        [[ 4 ],
+ *   [[ 1, 2, 3]]    X     [ 5 ],          =>     [[ 32 ]]
+ *                         [ 6 ]]
+ *
+ */
+function getMatrixProduct(m1, m2) {
+  const rowsM1 = m1.length;
+  const colsM1 = m1[0].length;
+  const colsM2 = m2[0].length;
+  // eslint-disable-next-line no-plusplus
+  const result = Array.from({ length: rowsM1 }, () => Array(colsM2)
+    .fill(0));
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < rowsM1; i++) {
+    // eslint-disable-next-line no-plusplus
+    for (let j = 0; j < colsM2; j++) {
+      // eslint-disable-next-line no-plusplus
+      for (let k = 0; k < colsM1; k++) {
+        result[i][j] += m1[i][k] * m2[k][j];
+      }
+    }
+  }
+  return result;
+}
+
+
+/**
+ * Returns the evaluation of the specified tic-tac-toe position.
+ * See the details: https://en.wikipedia.org/wiki/Tic-tac-toe
+ *
+ * Position is providing as 3x3 array with the following values: 'X','0', undefined
+ * Function should return who is winner in the current position according to the game rules.
+ * The result can be: 'X','0',undefined
+ *
+ * @param {array} position
+ * @return {string}
+ *
+ * @example
+ *
+ *   [[ 'X',   ,'0' ],
+ *    [    ,'X','0' ],       =>  'X'
+ *    [    ,   ,'X' ]]
+ *
+ *   [[ '0','0','0' ],
+ *    [    ,'X',    ],       =>  '0'
+ *    [ 'X',   ,'X' ]]
+ *
+ *   [[ '0','X','0' ],
+ *    [    ,'X',    ],       =>  undefined
+ *    [ 'X','0','X' ]]
+ *
+ *   [[    ,   ,    ],
+ *    [    ,   ,    ],       =>  undefined
+ *    [    ,   ,    ]]
+ *
+ */
+function evaluateTicTacToePosition(position) {
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < 3; i++) {
+    if (position[i][0] && position[i][0] === position[i][1] && position[i][1] === position[i][2]) {
+      return position[i][0];
+    }
+    if (position[0][i] && position[0][i] === position[1][i] && position[1][i] === position[2][i]) {
+      return position[0][i];
+    }
+  }
+  if (position[0][0] && position[0][0] === position[1][1] && position[1][1] === position[2][2]) {
+    return position[0][0];
+  }
+  if (position[0][2] && position[0][2] === position[1][1] && position[1][1] === position[2][0]) {
+    return position[0][2];
+  }
+
+  // No winner
+  return undefined;
+}
+
+
 module.exports = {
   getFizzBuzz,
   getFactorial,
@@ -507,8 +548,8 @@ module.exports = {
   isCreditCardNumber,
   getDigitalRoot,
   isBracketsBalanced,
-//   toNaryString,
-//   getCommonDirectoryPath,
-//   getMatrixProduct,
-//   evaluateTicTacToePosition,
+  toNaryString,
+  // getCommonDirectoryPath,
+  getMatrixProduct,
+  evaluateTicTacToePosition,
 };
