@@ -633,6 +633,7 @@ describe('03-arrays-tasks', () => {
   //   });
   //
   //
+  // eslint-disable-next-line max-len
   //   it.optional('getIdentityMatrix should return the identity matrix of the specified size', () => {
   //     [
   //       {
