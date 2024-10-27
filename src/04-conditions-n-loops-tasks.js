@@ -433,14 +433,26 @@ function toNaryString(num, n) {
  *   ['/web/assets/style.css', '/.bin/mocha',  '/read.me'] => '/'
  *   ['/web/favicon.ico', '/web-scripts/dump', '/verbalizer/logs'] => '/'
  */
-// function getCommonDirectoryPath(pathes) {
-//   let res = '';
-//   // eslint-disable-next-line no-plusplus
-//   for (const path of pathes) {
-//
-//   }
-//
-// }
+function getCommonDirectoryPath(pathes) {
+  if (pathes.length === 0) return '';
+
+  // Разбиваем первый путь на части
+  const parts = pathes[0].split('/');
+
+  let commonPath = '';
+
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < parts.length; i++) {
+    const part = parts[i];
+    if (pathes.every((path) => path.split('/')[i] === part)) {
+      commonPath += `${part}/`;
+    } else {
+      break;
+    }
+  }
+
+  return commonPath;
+}
 
 
 /**
@@ -549,7 +561,7 @@ module.exports = {
   getDigitalRoot,
   isBracketsBalanced,
   toNaryString,
-  // getCommonDirectoryPath,
+  getCommonDirectoryPath,
   getMatrixProduct,
   evaluateTicTacToePosition,
 };

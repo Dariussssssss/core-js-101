@@ -480,15 +480,13 @@ function toStringList(arr) {
  */
 function sortCitiesArray(arr) {
   return arr.sort((a, b) => {
-    // Compare countries first
     if (a.country < b.country) return -1;
     if (a.country > b.country) return 1;
 
-    // If countries are equal, compare cities
     if (a.city < b.city) return -1;
     if (a.city > b.city) return 1;
 
-    return 0; // They are equal
+    return 0;
   });
 }
 
@@ -601,9 +599,17 @@ function distinct(arr) {
 //  *    "Poland" => ["Lodz"]
 //  *   }
 //  */
-// function group(array, keySelector, valueSelector) {
-//
-// }
+function group(array, keySelector, valueSelector) {
+  return array.reduce((acc, item) => {
+    const key = keySelector(item);
+    const value = valueSelector(item);
+    if (!acc.has(key)) {
+      acc.set(key, []);
+    }
+    acc.get(key).push(value);
+    return acc;
+  }, new Map());
+}
 
 
 /**
@@ -714,7 +720,7 @@ module.exports = {
   getIdentityMatrix,
   getIntervalArray,
   distinct,
-  // group,
+  group,
   selectMany,
   getElementByIndexes,
   swapHeadAndTail,
